@@ -1,0 +1,829 @@
+
+
+
+        /*************** G E N E R A L ***************/
+
+*{/*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
+   box-sizing: border-box;
+}
+
+$linkColor: #09906e;
+$titleNavColor1: #e79f04;
+$bodyColor: #3a3a2c;
+$bodyTexColor: #ffad33;
+$titleRighteColor: #bbff33;
+
+@mixin decoration-line($color, $width, $gauge, $marginLeft){
+  border: 0;
+  border-top: $gauge solid $color;
+  margin-left: $marginLeft;
+  margin-top: 10px;
+  width: $width;
+}
+
+@mixin myPicture($marginTop, $marginLeft, $width){
+  border-radius: 100%;
+  margin-top: $marginTop;
+  margin-left: $marginLeft;
+  width: $width;
+}
+
+@mixin title($margin, $size, $marginTop, $color){
+  text-align: center;
+  margin: $margin;
+  font-size: $size;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: $marginTop;
+  color: $color;
+}
+
+@mixin titleRighte($fSize) {
+  font-weight: lighter;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: $fSize;
+  color: $titleRighteColor;
+}
+@mixin boxRighte($marginTop, $marginLeft, $marginRighte){
+  margin-right: $marginRighte;
+  margin-left: $marginLeft;
+  margin-top: $marginTop;
+  background-color: #494937;
+  box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+  border-radius: 7px;
+}
+
+@mixin links{
+  color: $titleRighteColor;
+  padding: 5px 10px;
+}
+
+
+html{/*la dimensione generale per tutti i testi*/
+  font-size: 75%;
+}
+
+
+body{
+  display: inline;
+  color: $bodyTexColor;
+  background-color: $bodyColor;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;/*dimensione testo nel body*/
+}
+
+a{
+  text-decoration: none;/*sottoliniatura del testo nei link*/
+}
+
+.clearfix::after{/*lezione 52 clearfix. in pochi parole uniamo tutti gli oggetti nella sezione gallery in un unico oggetto*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+        /*
+        *********************************
+        *********** H E A D E R *********
+        *********************************
+        */
+
+header{
+  #mySidebarSmall{
+    display: flex;
+    flex-direction: column;
+    top: 0;/*cosi header è attacato su*/
+    background-color: $bodyColor;
+    border-right: 1px solid #528415;
+    height: 100%;
+    width: 270px;
+    position: fixed;/*permette di fissare il header sul lato sinistro*/
+
+    #titelLeftSide {
+      h4{
+        margin-top: 7px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: $titleNavColor1;
+        font-size: 25px;
+        font-family: 'Dancing Script', cursive;
+      }
+
+      .name{
+        @include title(9px, 3rem, 5px, $titleNavColor1);
+        margin-bottom: auto;
+
+      }
+
+      .sorname{
+        @include title(9px, 3rem, 5px, #2db300);
+
+      }
+    }
+  }
+  nav{
+    #menuNav{
+      font-family: 'Lexend Zetta', sans-serif;
+      margin-top: 10px;
+      margin-left: -35px;
+      text-align: left;
+      list-style-type: none; /*convertiamo una lista ordinata in una semplice (togliamo le paline su lato sinistra)*/
+      .material-icons{/*mini icona di fianco al num di cell*/
+        color: $titleNavColor1;
+        float: left;
+      }
+      li{
+        a{
+          margin-left: 15px;
+          color: $linkColor;
+          font-size: 1.5rem;/*dimensioni testo*/
+          text-transform: uppercase;/*tutto il testo maiuscolo*/
+        }
+
+      }
+      hr {
+        @include decoration-line(#0ACE99, 25px, 3px, 1px);
+      } 
+    }
+  }
+  img{
+    @include myPicture(1px, 25px, 215px);
+  }
+}
+
+
+
+        /*
+        ************************************
+        ************** M A I N *************
+        ************************************
+        */
+
+#main-content{
+  float: right;
+  width: 70%;
+  padding: 30px;
+  font-family: 'Kalam', cursive;
+  font-size: 1.7rem;
+  h2{
+    padding-top: 17px;
+    padding-left: 10px;
+    @include titleRighte(2.1rem);
+  }
+  h3{
+    font-size: 2.7rem;
+    font-weight: lighter;
+    color: #00e6e6;
+    font-family: 'Caveat', cursive;
+    margin-bottom: -2px;
+  }
+
+  #box1{// M A I N
+    @include boxRighte(-20px, 5px, 0px);
+    hr{
+      @include decoration-line($titleRighteColor, 755px, 3px, 11px);
+    }
+    .profText{
+      padding: 5px;
+    }
+  }
+
+  #box2{// S E R V I C E S
+    @include boxRighte(40px, -190px, 180px);
+    hr{
+      @include decoration-line($titleRighteColor, 290px, 3px, 11px)
+    }
+    .profText{
+      padding: 5px;
+      p{
+        margin-top: 3px;
+      }
+    }
+  }
+
+  #box4{// C O N T A C T S
+    @include boxRighte(40px, -20px, 0px);
+    hr{
+      @include decoration-line($titleRighteColor, 180px, 3px, 11px);
+    }
+    .profText{
+      padding: 5px;
+      p{
+        margin-top: 3px;
+      }
+    }
+    .myContacts{
+      display: flex;
+      justify-content: space-around;
+      padding: 5px;
+      //font-size: 15px;
+      .links{
+        @include links;
+        a{
+          color: $linkColor;
+          padding-left: 3px;
+        }
+      }
+      img{/*mini icona di fianco al num di cell*/
+      float: left;
+      width: 17px;
+      }
+    }
+  }
+}
+
+          /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+
+/************ beck to up button ******************/
+
+.btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  opacity: .5;
+
+}
+
+
+
+#footerBox{
+  clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+  float: right;
+  width: 82.2%;
+  border-top: 1px solid #528415;
+  background-color: $bodyColor;
+  font-size: 13px;/*dimensione del testo*/
+  padding: 10px 0;/*definisco la ampiezza del box*/
+  .footerText{
+    text-align: center;
+    .material-icons{/*mini icona di fianco al num di cell*/
+    font-size: 13px;
+    }
+    .text1{
+      padding-left: 14px;
+    }
+  }
+  .footerLink{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+
+    .links{
+      @include links;
+      a{
+        color: $linkColor;
+        padding-left: 3px;
+      }
+    }
+    img{/*mini icona di fianco al num di cell*/
+    float: left;
+    width: 17px;
+    }
+  }
+  .myLogo{
+    text-align: center;
+    margin: 15px 50px 5px 50px;
+    img{
+      width: 200px;
+    }
+  }
+}
+
+
+                /**********************************************
+              **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
+                              === RESPONSIVE ===
+                **********************************************/
+
+  @media only screen and (min-width: 768px) {
+
+    
+  }
+  
+
+
+
+
+/**************************************************************************/
+  @media only screen and (min-width: 999px) {
+
+
+    nav{
+      .closebtn{
+        display: none;
+      }
+    }
+
+    #main{
+      .openbtn{
+        display: none;
+      }
+    }
+
+    header{
+      #smallBar{
+        display: none;
+      }
+    }
+
+
+    
+header{
+  #bigBar{
+      #mySidebar{
+        display: flex;
+        flex-direction: column;
+        top: 0;/*cosi header è attacato su*/
+        background-color: $bodyColor;
+        border-right: 1px solid #528415;
+        height: 100%;
+        width: 270px;
+        position: fixed;/*permette di fissare il header sul lato sinistro*/
+    
+        #titelLeftSide {
+          h4{
+            margin-top: 7px;
+            margin-bottom: 3px;
+            text-align: center;
+            color: $titleNavColor1;
+            font-size: 25px;
+            font-family: 'Dancing Script', cursive;
+          }
+    
+          .name{
+            @include title(9px, 3rem, 5px, $titleNavColor1);
+            margin-bottom: auto;
+    
+          }
+    
+          .sorname{
+            @include title(9px, 3rem, 5px, #2db300);
+    
+          }
+        }
+      nav{
+        #menuNav{
+          font-family: 'Lexend Zetta', sans-serif;
+          margin-top: 10px;
+          margin-left: -35px;
+          text-align: left;
+          list-style-type: none; /*convertiamo una lista ordinata in una semplice (togliamo le paline su lato sinistra)*/
+          .material-icons{/*mini icona di fianco al num di cell*/
+            color: $titleNavColor1;
+            float: left;
+          }
+          li{
+            a{
+              margin-left: 15px;
+              color: $linkColor;
+              font-size: 1.5rem;/*dimensioni testo*/
+              text-transform: uppercase;/*tutto il testo maiuscolo*/
+            }
+             a:hover{
+              color: #40f2c8;
+            }
+    
+          }
+          hr {
+            @include decoration-line(#0ACE99, 25px, 3px, 1px);
+          } 
+        }
+      }
+      img{
+        @include myPicture(1px, 25px, 215px);
+      }
+    }
+  }
+}
+
+    #mySidebar{
+      .lighteName:hover {/*ilumino mio nome cog-me*/
+        color: $titleNavColor1;
+        text-shadow: 0px 0 15px $titleNavColor1;
+      }
+
+      .lighteSorname:hover {/*ilumino mio nome cog-me*/
+        color: $titleNavColor1;
+        text-shadow: 0px 0 15px #009900;
+      }
+    }
+
+
+
+    /********** MINE **********/
+
+  #main-content{
+    .links a:hover{
+      background-color: #40f2c8;
+      border-radius: 3px;
+      padding: 2px;
+      color: black;
+    }
+
+  }
+
+
+
+
+          /*
+      ******************************************
+      *************** F O O T E R **************
+      ******************************************
+      */
+
+  /************ beck to up button ******************/
+
+  .btn:hover{
+    height: 80px;
+  }
+
+
+  #footerBox{
+    
+    .links a:hover{
+      color: #40f2c8;
+      text-decoration: underline;
+    }
+  
+  }
+
+     /*************************************
+        ======= K E Y F R A M E S =======
+      ======= A N I M A T I O N S =======
+    *************************************/
+
+    #mySidebar{
+      opacity: 0;
+      animation-name: magicBar;
+      animation-duration: 2s;
+      animation-delay: .7s;
+      animation-fill-mode: forwards;
+      animation-direction: normal;//direzione della animazione (normal è da dx a sx)
+          
+    }
+ 
+    @keyframes magicBar{
+      0%{
+        opacity: 0;
+        transform:translateX(-50px);
+
+      }
+      100%{
+        opacity: 1;
+        transform:translateX(0px);
+
+      }
+    }
+
+  #titelLeftSide h1 {
+      opacity: 0;
+      animation-name: magic-text;
+      animation-duration: 1.2s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+    }
+  @keyframes magic-text {
+
+        0%{
+          opacity: 0;
+          transform:translateX(-50px);
+        }
+        100%{
+          opacity: 1;
+          transform:translateX(0px);
+        }
+
+  }
+
+  #titelLeftSide h4 {
+    opacity: 0;
+    animation-name: hero-btn;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hero-btn{
+    0%{
+      opacity: 0;
+      transform: translatey(-50px);
+    }
+    100%{
+      opacity: 1;
+      transform: translatey(0px);
+    }
+  }
+}
+  
+
+/**************************************************************************/
+
+  @media only screen and (max-width: 767px) {
+  //si intende la risoluzione da 0 ad un massimo di 767px
+
+  header{
+    #bigBar{
+      display: none;
+    }
+  }
+
+
+
+        /********  SIDE BAR MOBILE  *********/
+
+    header {
+      #smallBar{
+        #mySidebarSmall{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          opacity: .94;
+          top: 0;/*cosi header è attacato su*/
+          left: 0;
+          background-color: $bodyColor;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 10px;
+          border-right: 1px solid #528415;
+    
+        #titelLeftSide {
+          .name{
+            @include title(9px, 2.7rem, 5px, $titleNavColor1);
+            margin-bottom: auto;
+                
+          }
+    
+          .sorname {
+            @include title(9px, 2.7rem, 5px, #2db300);
+    
+          }
+
+          h4{
+            margin-top: 7px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: $titleNavColor1;
+            font-size: 1.7rem;
+            font-family: 'Dancing Script', cursive;
+          }
+        }
+        #menuNav{
+          .closebtn {
+            position: absolute;            
+            top: 5px;
+            right: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: black;
+            color: #bbff33;
+            padding: 5px 10px 8px 10px;
+            border: none;
+    
+          }
+
+          .material-icons{/*mini icona di fianco al num di cell*/
+            font-size: 23px;
+            color: $titleNavColor1;
+            float: left;
+          }
+
+          li{
+            a{
+              padding: 2px 8px 8px 20px;
+              color: #09d3a0;
+              font-size: 1.2rem;/*dimensioni testo*/
+              text-transform: uppercase;/*tutto il testo maiuscolo*/
+              
+              display: block;
+              transition: 0.3s;
+            }
+          }
+          hr {
+            @include decoration-line(#0ACE99, 25px, 3px, 1px);
+            margin-top: 5px;
+          }
+        }      
+          .myFoto{
+            @include myPicture(25px, 13px, 200px);
+          }
+    }
+  }
+}
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+
+    }
+  
+
+  body{
+    .openbtn {
+      position: absolute;
+      //position: fixed;
+      //opacity: .5;
+      top: 15px;
+      left: 15px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #111;
+      color: #09d3a0;
+      padding: 10px 15px;
+      border: none;
+    }
+  }
+
+
+          /********** SDB END **********/
+
+
+
+    
+        /*
+        ************************************
+        ************** M A I N *************
+        ************************************
+        */
+  #main-content{
+    margin-top: 50px;
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    //padding: 30px;
+    font-family: 'Kalam', cursive;
+    font-size: 1.3rem;
+    h2{
+      padding-top: 17px;
+      @include titleRighte(1.5rem);
+    }
+    h3{
+      font-size: 1.9rem;
+      font-weight: lighter;
+      color: #00e6e6;
+      font-family: 'Caveat', cursive;
+      margin-bottom: -2px;
+    }
+
+    #box1{// M A I N
+      @include boxRighte(-20px, 0px, 0px);
+      hr{
+        @include decoration-line($titleRighteColor, auto, 3px, 11px);
+      }
+      .profText{
+        padding: 5px;
+      }
+    }
+
+    #box2{// S E R V I C E S
+      @include boxRighte(40px, 0, 0);
+      hr{
+        @include decoration-line($titleRighteColor, auto, 3px, 11px);
+      }
+      .profText{
+        padding: 5px;
+        p{
+          margin-top: 3px;
+        }
+      }
+    }
+
+    #box3{// S K I L L S
+      @include boxRighte(40px, 0px, 0px);
+      hr{
+        @include decoration-line($titleRighteColor, auto, 3px, 11px);
+      }
+      .mySkills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        //padding: 7px;
+        .label{
+          padding: 7px;
+          color: #00e6e6;
+        }
+        progress{
+          padding: 10px;
+        }
+      }
+    }
+
+    #box4{// C O N T A C T S
+      @include boxRighte(40px, 0px, 0px);
+      hr{
+        @include decoration-line($titleRighteColor, auto, 3px, 11px);
+      }
+      .profText{
+        padding: 5px;
+        p{
+          margin-top: 3px;
+        }
+      }
+      .myContacts{
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        font-size: 1.1rem;
+        .links{
+          @include links;
+          a{
+            color: #00e6e6;
+            padding-left: 3px;
+          }
+        }
+        img{/*mini icona di fianco al num di cell*/
+        float: left;
+        width: 12px;
+        }
+      }
+    }
+  }
+
+
+           /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+
+  .btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s;
+    opacity: .5;
+  
+  }
+  
+
+  #footerBox{
+    clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    width: 100%;
+    border-top: 1px solid #528415;
+    font-size: 9px;/*dimensione del testo*/
+    //padding: 10px 0;/*definisco la ampiezza del box*/
+    .footerText{
+      color: #ffad33;
+      text-align: center;
+      .material-icons{/*mini icona di fianco al num di cell*/
+      font-size: 13px;
+      }
+      .text1{
+        padding-left: 7px;
+      }
+    }
+    .footerLink{
+      display: flex;
+      justify-content: space-around;
+      
+
+      .links{
+        color: $titleRighteColor;
+        padding: 5px 1px;
+        a{
+          color: $linkColor;
+        }
+      }
+      img{/*mini icona di fianco al num di cell*/
+      float: left;
+      width: 9px;
+      }
+    }
+    .myLogo{
+      text-align: center;
+      margin: 15px 50px 5px 50px;
+      img{
+        width: 130px;
+      }
+    }
+  }
+}        
+

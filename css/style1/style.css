@@ -1,0 +1,916 @@
+@charset "UTF-8";
+/*************** G E N E R A L ***************/
+* {
+  /*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  /*la dimensione generale per tutti i testi*/
+  font-size: 75%;
+}
+
+body {
+  display: inline;
+  color: #ffad33;
+  background-color: #3a3a2c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  /*dimensione testo nel body*/
+}
+
+a {
+  text-decoration: none;
+  /*sottoliniatura del testo nei link*/
+}
+
+.clearfix::after {
+  /*lezione 52 clearfix. in pochi parole uniamo tutti gli oggetti nella sezione gallery in un unico oggetto*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*
+        *********************************
+        *********** H E A D E R *********
+        *********************************
+        */
+header #mySidebarSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  /*cosi header è attacato su*/
+  background-color: #3a3a2c;
+  border-right: 1px solid #528415;
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  /*permette di fissare il header sul lato sinistro*/
+}
+
+header #mySidebarSmall #titelLeftSide h4 {
+  margin-top: 7px;
+  margin-bottom: 3px;
+  text-align: center;
+  color: #e79f04;
+  font-size: 25px;
+  font-family: 'Dancing Script', cursive;
+}
+
+header #mySidebarSmall #titelLeftSide .name {
+  text-align: center;
+  margin: 9px;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 5px;
+  color: #e79f04;
+  margin-bottom: auto;
+}
+
+header #mySidebarSmall #titelLeftSide .sorname {
+  text-align: center;
+  margin: 9px;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 5px;
+  color: #2db300;
+}
+
+header nav #menuNav {
+  font-family: 'Lexend Zetta', sans-serif;
+  margin-top: 10px;
+  margin-left: -35px;
+  text-align: left;
+  list-style-type: none;
+  /*convertiamo una lista ordinata in una semplice (togliamo le paline su lato sinistra)*/
+}
+
+header nav #menuNav .material-icons {
+  /*mini icona di fianco al num di cell*/
+  color: #e79f04;
+  float: left;
+}
+
+header nav #menuNav li a {
+  margin-left: 15px;
+  color: #09906e;
+  font-size: 1.5rem;
+  /*dimensioni testo*/
+  text-transform: uppercase;
+  /*tutto il testo maiuscolo*/
+}
+
+header nav #menuNav hr {
+  border: 0;
+  border-top: 3px solid #0ACE99;
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 25px;
+}
+
+header img {
+  border-radius: 100%;
+  margin-top: 1px;
+  margin-left: 25px;
+  width: 215px;
+}
+
+/*
+        ************************************
+        ************** M A I N *************
+        ************************************
+        */
+#main-content {
+  float: right;
+  width: 70%;
+  padding: 30px;
+  font-family: 'Kalam', cursive;
+  font-size: 1.7rem;
+}
+
+#main-content h2 {
+  padding-top: 17px;
+  padding-left: 10px;
+  font-weight: lighter;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 2.1rem;
+  color: #bbff33;
+}
+
+#main-content h3 {
+  font-size: 2.7rem;
+  font-weight: lighter;
+  color: #00e6e6;
+  font-family: 'Caveat', cursive;
+  margin-bottom: -2px;
+}
+
+#main-content #box1 {
+  margin-right: 0px;
+  margin-left: 5px;
+  margin-top: -20px;
+  background-color: #494937;
+  -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+          box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+  /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+  border-radius: 7px;
+}
+
+#main-content #box1 hr {
+  border: 0;
+  border-top: 3px solid #bbff33;
+  margin-left: 11px;
+  margin-top: 10px;
+  width: 755px;
+}
+
+#main-content #box1 .profText {
+  padding: 5px;
+}
+
+#main-content #box2 {
+  margin-right: 180px;
+  margin-left: -190px;
+  margin-top: 40px;
+  background-color: #494937;
+  -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+          box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+  /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+  border-radius: 7px;
+}
+
+#main-content #box2 hr {
+  border: 0;
+  border-top: 3px solid #bbff33;
+  margin-left: 11px;
+  margin-top: 10px;
+  width: 290px;
+}
+
+#main-content #box2 .profText {
+  padding: 5px;
+}
+
+#main-content #box2 .profText p {
+  margin-top: 3px;
+}
+
+#main-content #box4 {
+  margin-right: 0px;
+  margin-left: -20px;
+  margin-top: 40px;
+  background-color: #494937;
+  -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+          box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+  /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+  border-radius: 7px;
+}
+
+#main-content #box4 hr {
+  border: 0;
+  border-top: 3px solid #bbff33;
+  margin-left: 11px;
+  margin-top: 10px;
+  width: 180px;
+}
+
+#main-content #box4 .profText {
+  padding: 5px;
+}
+
+#main-content #box4 .profText p {
+  margin-top: 3px;
+}
+
+#main-content #box4 .myContacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+}
+
+#main-content #box4 .myContacts .links {
+  color: #bbff33;
+  padding: 5px 10px;
+}
+
+#main-content #box4 .myContacts .links a {
+  color: #09906e;
+  padding-left: 3px;
+}
+
+#main-content #box4 .myContacts img {
+  /*mini icona di fianco al num di cell*/
+  float: left;
+  width: 17px;
+}
+
+/*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+/************ beck to up button ******************/
+.btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: .5;
+}
+
+#footerBox {
+  clear: both;
+  /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+  float: right;
+  width: 82.2%;
+  border-top: 1px solid #528415;
+  background-color: #3a3a2c;
+  font-size: 13px;
+  /*dimensione del testo*/
+  padding: 10px 0;
+  /*definisco la ampiezza del box*/
+}
+
+#footerBox .footerText {
+  text-align: center;
+}
+
+#footerBox .footerText .material-icons {
+  /*mini icona di fianco al num di cell*/
+  font-size: 13px;
+}
+
+#footerBox .footerText .text1 {
+  padding-left: 14px;
+}
+
+#footerBox .footerLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+}
+
+#footerBox .footerLink .links {
+  color: #bbff33;
+  padding: 5px 10px;
+}
+
+#footerBox .footerLink .links a {
+  color: #09906e;
+  padding-left: 3px;
+}
+
+#footerBox .footerLink img {
+  /*mini icona di fianco al num di cell*/
+  float: left;
+  width: 17px;
+}
+
+#footerBox .myLogo {
+  text-align: center;
+  margin: 15px 50px 5px 50px;
+}
+
+#footerBox .myLogo img {
+  width: 200px;
+}
+
+/**********************************************
+              **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
+                              === RESPONSIVE ===
+                **********************************************/
+/**************************************************************************/
+@media only screen and (min-width: 999px) {
+  nav .closebtn {
+    display: none;
+  }
+  #main .openbtn {
+    display: none;
+  }
+  header #smallBar {
+    display: none;
+  }
+  header #bigBar #mySidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    /*cosi header è attacato su*/
+    background-color: #3a3a2c;
+    border-right: 1px solid #528415;
+    height: 100%;
+    width: 270px;
+    position: fixed;
+    /*permette di fissare il header sul lato sinistro*/
+  }
+  header #bigBar #mySidebar #titelLeftSide h4 {
+    margin-top: 7px;
+    margin-bottom: 3px;
+    text-align: center;
+    color: #e79f04;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+  }
+  header #bigBar #mySidebar #titelLeftSide .name {
+    text-align: center;
+    margin: 9px;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5px;
+    color: #e79f04;
+    margin-bottom: auto;
+  }
+  header #bigBar #mySidebar #titelLeftSide .sorname {
+    text-align: center;
+    margin: 9px;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5px;
+    color: #2db300;
+  }
+  header #bigBar #mySidebar nav #menuNav {
+    font-family: 'Lexend Zetta', sans-serif;
+    margin-top: 10px;
+    margin-left: -35px;
+    text-align: left;
+    list-style-type: none;
+    /*convertiamo una lista ordinata in una semplice (togliamo le paline su lato sinistra)*/
+  }
+  header #bigBar #mySidebar nav #menuNav .material-icons {
+    /*mini icona di fianco al num di cell*/
+    color: #e79f04;
+    float: left;
+  }
+  header #bigBar #mySidebar nav #menuNav li a {
+    margin-left: 15px;
+    color: #09906e;
+    font-size: 1.5rem;
+    /*dimensioni testo*/
+    text-transform: uppercase;
+    /*tutto il testo maiuscolo*/
+  }
+  header #bigBar #mySidebar nav #menuNav li a:hover {
+    color: #40f2c8;
+  }
+  header #bigBar #mySidebar nav #menuNav hr {
+    border: 0;
+    border-top: 3px solid #0ACE99;
+    margin-left: 1px;
+    margin-top: 10px;
+    width: 25px;
+  }
+  header #bigBar #mySidebar img {
+    border-radius: 100%;
+    margin-top: 1px;
+    margin-left: 25px;
+    width: 215px;
+  }
+  #mySidebar .lighteName:hover {
+    /*ilumino mio nome cog-me*/
+    color: #e79f04;
+    text-shadow: 0px 0 15px #e79f04;
+  }
+  #mySidebar .lighteSorname:hover {
+    /*ilumino mio nome cog-me*/
+    color: #e79f04;
+    text-shadow: 0px 0 15px #009900;
+  }
+  /********** MINE **********/
+  #main-content .links a:hover {
+    background-color: #40f2c8;
+    border-radius: 3px;
+    padding: 2px;
+    color: black;
+  }
+  /*
+      ******************************************
+      *************** F O O T E R **************
+      ******************************************
+      */
+  /************ beck to up button ******************/
+  .btn:hover {
+    height: 80px;
+  }
+  #footerBox .links a:hover {
+    color: #40f2c8;
+    text-decoration: underline;
+  }
+  /*************************************
+        ======= K E Y F R A M E S =======
+      ======= A N I M A T I O N S =======
+    *************************************/
+  #mySidebar {
+    opacity: 0;
+    -webkit-animation-name: magicBar;
+            animation-name: magicBar;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: .7s;
+            animation-delay: .7s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+  }
+  @-webkit-keyframes magicBar {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes magicBar {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  #titelLeftSide h1 {
+    opacity: 0;
+    -webkit-animation-name: magic-text;
+            animation-name: magic-text;
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  @-webkit-keyframes magic-text {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes magic-text {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  #titelLeftSide h4 {
+    opacity: 0;
+    -webkit-animation-name: hero-btn;
+            animation-name: hero-btn;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes hero-btn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translatey(-50px);
+              transform: translatey(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+  }
+  @keyframes hero-btn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translatey(-50px);
+              transform: translatey(-50px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+  }
+}
+
+/**************************************************************************/
+@media only screen and (max-width: 767px) {
+  header #bigBar {
+    display: none;
+  }
+  /********  SIDE BAR MOBILE  *********/
+  header #smallBar #mySidebarSmall {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    opacity: .94;
+    top: 0;
+    /*cosi header è attacato su*/
+    left: 0;
+    background-color: #3a3a2c;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 10px;
+    border-right: 1px solid #528415;
+  }
+  header #smallBar #mySidebarSmall #titelLeftSide .name {
+    text-align: center;
+    margin: 9px;
+    font-size: 2.7rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5px;
+    color: #e79f04;
+    margin-bottom: auto;
+  }
+  header #smallBar #mySidebarSmall #titelLeftSide .sorname {
+    text-align: center;
+    margin: 9px;
+    font-size: 2.7rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5px;
+    color: #2db300;
+  }
+  header #smallBar #mySidebarSmall #titelLeftSide h4 {
+    margin-top: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e79f04;
+    font-size: 1.7rem;
+    font-family: 'Dancing Script', cursive;
+  }
+  header #smallBar #mySidebarSmall #menuNav .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: #bbff33;
+    padding: 5px 10px 8px 10px;
+    border: none;
+  }
+  header #smallBar #mySidebarSmall #menuNav .material-icons {
+    /*mini icona di fianco al num di cell*/
+    font-size: 23px;
+    color: #e79f04;
+    float: left;
+  }
+  header #smallBar #mySidebarSmall #menuNav li a {
+    padding: 2px 8px 8px 20px;
+    color: #09d3a0;
+    font-size: 1.2rem;
+    /*dimensioni testo*/
+    text-transform: uppercase;
+    /*tutto il testo maiuscolo*/
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header #smallBar #mySidebarSmall #menuNav hr {
+    border: 0;
+    border-top: 3px solid #0ACE99;
+    margin-left: 1px;
+    margin-top: 10px;
+    width: 25px;
+    margin-top: 5px;
+  }
+  header #smallBar #mySidebarSmall .myFoto {
+    border-radius: 100%;
+    margin-top: 25px;
+    margin-left: 13px;
+    width: 200px;
+  }
+  #main {
+    -webkit-transition: margin-left .5s;
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  body .openbtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #111;
+    color: #09d3a0;
+    padding: 10px 15px;
+    border: none;
+  }
+  /********** SDB END **********/
+  /*
+        ************************************
+        ************** M A I N *************
+        ************************************
+        */
+  #main-content {
+    margin-top: 50px;
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: auto;
+    font-family: 'Kalam', cursive;
+    font-size: 1.3rem;
+  }
+  #main-content h2 {
+    padding-top: 17px;
+    font-weight: lighter;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 1.5rem;
+    color: #bbff33;
+  }
+  #main-content h3 {
+    font-size: 1.9rem;
+    font-weight: lighter;
+    color: #00e6e6;
+    font-family: 'Caveat', cursive;
+    margin-bottom: -2px;
+  }
+  #main-content #box1 {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: -20px;
+    background-color: #494937;
+    -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+            box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+    /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+    border-radius: 7px;
+  }
+  #main-content #box1 hr {
+    border: 0;
+    border-top: 3px solid #bbff33;
+    margin-left: 11px;
+    margin-top: 10px;
+    width: auto;
+  }
+  #main-content #box1 .profText {
+    padding: 5px;
+  }
+  #main-content #box2 {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 40px;
+    background-color: #494937;
+    -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+            box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+    /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+    border-radius: 7px;
+  }
+  #main-content #box2 hr {
+    border: 0;
+    border-top: 3px solid #bbff33;
+    margin-left: 11px;
+    margin-top: 10px;
+    width: auto;
+  }
+  #main-content #box2 .profText {
+    padding: 5px;
+  }
+  #main-content #box2 .profText p {
+    margin-top: 3px;
+  }
+  #main-content #box3 {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 40px;
+    background-color: #494937;
+    -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+            box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+    /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+    border-radius: 7px;
+  }
+  #main-content #box3 hr {
+    border: 0;
+    border-top: 3px solid #bbff33;
+    margin-left: 11px;
+    margin-top: 10px;
+    width: auto;
+  }
+  #main-content #box3 .mySkills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #main-content #box3 .mySkills .label {
+    padding: 7px;
+    color: #00e6e6;
+  }
+  #main-content #box3 .mySkills progress {
+    padding: 10px;
+  }
+  #main-content #box4 {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 40px;
+    background-color: #494937;
+    -webkit-box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+            box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);
+    /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+    border-radius: 7px;
+  }
+  #main-content #box4 hr {
+    border: 0;
+    border-top: 3px solid #bbff33;
+    margin-left: 11px;
+    margin-top: 10px;
+    width: auto;
+  }
+  #main-content #box4 .profText {
+    padding: 5px;
+  }
+  #main-content #box4 .profText p {
+    margin-top: 3px;
+  }
+  #main-content #box4 .myContacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 5px;
+    font-size: 1.1rem;
+  }
+  #main-content #box4 .myContacts .links {
+    color: #bbff33;
+    padding: 5px 10px;
+  }
+  #main-content #box4 .myContacts .links a {
+    color: #00e6e6;
+    padding-left: 3px;
+  }
+  #main-content #box4 .myContacts img {
+    /*mini icona di fianco al num di cell*/
+    float: left;
+    width: 12px;
+  }
+  /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+  .btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: .5;
+  }
+  #footerBox {
+    clear: both;
+    /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    width: 100%;
+    border-top: 1px solid #528415;
+    font-size: 9px;
+    /*dimensione del testo*/
+  }
+  #footerBox .footerText {
+    color: #ffad33;
+    text-align: center;
+  }
+  #footerBox .footerText .material-icons {
+    /*mini icona di fianco al num di cell*/
+    font-size: 13px;
+  }
+  #footerBox .footerText .text1 {
+    padding-left: 7px;
+  }
+  #footerBox .footerLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #footerBox .footerLink .links {
+    color: #bbff33;
+    padding: 5px 1px;
+  }
+  #footerBox .footerLink .links a {
+    color: #09906e;
+  }
+  #footerBox .footerLink img {
+    /*mini icona di fianco al num di cell*/
+    float: left;
+    width: 9px;
+  }
+  #footerBox .myLogo {
+    text-align: center;
+    margin: 15px 50px 5px 50px;
+  }
+  #footerBox .myLogo img {
+    width: 130px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,408 @@
+
+
+
+        /*************** G E N E R A L ***************/
+
+*{/*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
+   box-sizing: border-box;
+}
+
+$linkColor: #09906e;
+$titleNavColor1: #e79f04;
+$bodyColor: #3a3a2c;
+$bodyTexColor: #ffad33;
+$titleRighteColor: #bbff33;
+
+@mixin backBtn {
+  border: none;
+  border-radius: 10px;
+  color: rgb(232, 236, 20);
+  padding: 10px 22px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: rgb(8, 8, 1);
+  border: 3px solid #eeea09;
+  transition: 0.7s;
+}
+
+@mixin decoration-line($color, $width, $gauge, $marginLeft){
+  border: 0;
+  border-top: $gauge solid $color;
+  margin-left: $marginLeft;
+  margin-top: 10px;
+  width: $width;
+}
+
+@mixin myPicture($marginTop, $marginLeft, $width){
+  border-radius: 100%;
+  margin-top: $marginTop;
+  margin-left: $marginLeft;
+  width: $width;
+}
+
+@mixin title($margin, $marginTop, $color){
+  text-align: center;
+  margin: $margin;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: $marginTop;
+  color: $color;
+}
+
+@mixin titleRighte{
+  font-weight: lighter;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 25px;
+  color: $titleRighteColor;
+}
+@mixin boxRighte($marginTop, $marginLeft, $marginRighte){
+  margin-right: $marginRighte;
+  margin-left: $marginLeft;
+  margin-top: $marginTop;
+  background-color: #494937;
+  box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+  border-radius: 7px;
+}
+
+@mixin links{
+  color: $titleRighteColor;
+  padding: 5px 10px;
+}
+
+
+html{/*la dimensione generale per tutti i testi*/
+  font-size: 75%;
+}
+
+
+body{
+  background: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;/*dimensione testo nel body*/
+
+}
+
+a{
+  text-decoration: none;/*sottoliniatura del testo nei link*/
+}
+
+.clearfix::after{/*lezione 52 clearfix. in pochi parole uniamo tutti gli oggetti nella sezione gallery in un unico oggetto*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+        /*
+        ************************************
+        ************** M A I N *************
+        ************************************
+        */
+
+
+body{
+  background-image: url(../images/p1-1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+    header{
+      border-bottom: thick double #bbff33;;
+      h1{
+        text-align: center;
+        @include titleRighte;
+        font-size: 35px;                
+      }      
+      form{
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        button{
+          @include backBtn;
+        }
+      }
+    }
+    #mainContent{
+      #mineSection{  
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        .boxCV{
+          color: rgb(189, 253, 255);
+          width: auto;
+          background-color: #243142;
+          opacity: .9;/*diamo un efetto trasparenza*/
+          margin: 25px;
+          box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+          border-radius: 7px;
+          table{
+            border: 2px solid rgb(236, 240, 6);
+            border-spacing: 15px;
+            margin: 10px;
+            caption{
+              font-size: 3rem;
+              color: rgb(250, 230, 115);
+            }
+            tr{
+              th{
+                border: 2px solid rgb(236, 240, 6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+          /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+          
+
+#footerBoxCV{
+  position: relative;//serve per bottone "back"
+  clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+  width: 100%;
+  border-top: 1px solid #528415;
+  font-size: 13px;/*dimensione del testo*/
+  //padding: 10px 0;/*definisco la ampiezza del box*/
+  .footerText{
+    color: #ffad33;
+    text-align: center;
+    .material-icons{/*mini icona di fianco al num di cell*/
+    font-size: 13px;
+    }
+    .text1{
+      padding-left: 14px;
+    }
+  }
+  .footerLink{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+
+    .links{
+      @include links;
+      a{
+        color: $linkColor;
+        padding-left: 3px;
+      }
+    }
+    img{/*mini icona di fianco al num di cell*/
+    float: left;
+    width: 17px;
+    }
+  }
+
+  .myLogo{
+    text-align: center;
+    margin: 15px 50px 15px 50px;
+    img{
+      width: 200px;
+    }
+  }
+  .cvButton{
+    form{
+      position: absolute;
+      bottom: 25px;
+      left: 15px;
+      button{
+        @include backBtn;
+
+      }
+    }
+  }
+}
+          
+/**************************************************************************/
+                /**********************************************
+              **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
+                              === RESPONSIVE ===
+                **********************************************/
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 999px) {
+
+  body header{
+    button:hover{
+      background: #eeea09;
+      transition: .9s;
+      color: black;
+    }
+  }
+
+  footer #footerBoxCV{
+    .links a:hover{/*pseudo class. qando passiamo con mous suopra cambia colore*/
+      color: #40f2c8;
+      text-decoration: underline;
+    }
+    .cvButton {
+      button:hover{
+        background: #eeea09;
+        transition: .9s;
+        color: black;
+      }
+    }
+  }
+}
+
+
+/**************************************************************************/
+@media only screen and (max-width: 767px) {
+
+
+  /*
+  ************************************
+  ************** M A I N *************
+  ************************************
+  */
+
+
+  body{
+    background-image: url(../images/p2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+      header{
+        border-bottom: thick double #bbff33;
+        margin-bottom: 45px;
+        h1{
+          text-align: center;
+          @include titleRighte;
+          font-size: 20px;                
+        }      
+        form{
+          position: absolute;
+          top: 70px;
+          left: 10px;
+          button{
+            border: none;
+            border-radius: 10px;
+            color: rgb(232, 236, 20);
+            padding: 5px 9px;
+            text-decoration: none;
+            font-size: 12px;
+            background-color: rgb(8, 8, 1);
+            border: 3px solid #eeea09;
+          
+          }
+        }
+      }
+      #mainContent{
+        #mineSection{  
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          //justify-content: space-around;
+          .boxCV{
+            color: rgb(189, 253, 255);
+            width: auto;
+            background-color: #243142;
+            opacity: .9;/*diamo un efetto trasparenza*/
+            margin: 25px;
+            box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
+            border-radius: 7px;
+  
+            table{
+              border: 2px solid rgb(236, 240, 6);
+              border-spacing: 15px;
+              margin: 10px;
+              caption{
+                font-size: 2.2rem;
+                color: rgb(250, 230, 115);
+              }
+              tr{
+                font-size: 1.2rem;
+                th{
+                  border: 2px solid rgb(236, 240, 6);
+
+                }
+            } 
+          }
+        }
+      }
+    }
+  }
+        
+
+
+
+                /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+          
+
+  #footerBoxCV{
+    position: relative;//serve per bottone "back"
+    clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    width: 100%;
+    border-top: 1px solid #528415;
+    font-size: 9px;/*dimensione del testo*/
+    //padding: 10px 0;/*definisco la ampiezza del box*/
+    .footerText{
+      color: #ffad33;
+      text-align: center;
+      .material-icons{/*mini icona di fianco al num di cell*/
+      font-size: 13px;
+      }
+      .text1{
+        padding-left: 7px;
+      }
+    }
+    .footerLink{
+      display: flex;
+      justify-content: space-around;
+      
+
+      .links{
+        color: $titleRighteColor;
+        padding: 5px 1px;
+        a{
+          color: $linkColor;
+        }
+      }
+      img{/*mini icona di fianco al num di cell*/
+      float: left;
+      width: 9px;
+      }
+    }
+    .myLogo{
+      text-align: center;
+      margin: 15px 50px 15px 50px;
+      img{
+        width: 130px;
+      }
+    }
+    .cvButton{
+      form{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        button{
+          border: none;
+          border-radius: 10px;
+          color: rgb(232, 236, 20);
+          padding: 5px 9px;
+          text-decoration: none;
+          font-size: 12px;
+          background-color: rgb(8, 8, 1);
+          border: 3px solid #eeea09;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+              /*************************************
+                 ======= K E Y F R A M E S =======
+                ======= A N I M A T I O N S =======
+              *************************************/

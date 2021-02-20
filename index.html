@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X5FXCNGET"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0X5FXCNGET');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Questo è il sito privato di Taras Mykhaylovskyy">
+    <meta name="author" content="Taras Mykhaylovskyy">
+    <meta name="keywords" content="Front End Developer, sviluppatore Front End, Taras Mykhaylovskyy">
+
+    <title>Mykhaylovskyy Taras</title>
+
+    <!--*********** F A V I C O N ***********-->
+    <link rel="apple-touch-icon" sizes="180x180" href="css/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="css/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="css/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="css/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="css/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="css/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="css/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--serve per la console. per vedere come viene sugli smartphone-->
+
+        <!--*** C S S ***-->
+    <link rel="stylesheet" href="css/style1/normalize.css"><!--colegamento con normalize.css MIRACOMANDO! normalize deve essere sopra il link del css!-->
+    <link rel="stylesheet" href="css/style1/style.css"><!--colegamento con stili CSS-->
+
+              <!--******* S T I L I   D I   T E S T O *******-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap" rel="stylesheet"><!--stile text menu nav-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"><!--stile text titelLeftSide h3-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--stile text titelLeftSide h1/2-->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"><!--stile di testo footer-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"><!--stile title h2-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"><!--stile di testo body-->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"><!--LE MINI ICONE-->
+  </head>
+
+  <body>
+
+    <!--BUTTON UP-->
+    <button class="btn">up<i class="fa fa-arrow-up"></i></button>
+    <script>
+        let btn= document.querySelector('.btn');
+        btn.addEventListener('click',function(){
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+
+    <!--******* HEADER *******-->
+    <header>
+      <div id="bigBar">
+        <div id="mySidebar" class="sidebar">
+          <section id="titelLeftSide">
+            <a href="index.html">
+              <div class="lighteName">
+                <h1 class="name">TARAS</h1>
+              </div>
+              <div class="lighteSorname">
+                <h1 class="sorname">MYKHAYLOVSKYY</h1>
+              </div>
+            </a>
+            <h4>{ The more technology I learn, <br> the more I realize <br> how little I know... }</h4>
+          </section>
+          <nav>
+            <ul id="menuNav">
+              <li><span class="material-icons">roofing</span><a href="#main-content">HOME</a></li>
+              <hr>
+              <li><span class="material-icons">self_improvement</span><a href="#box1">ABOUT ME</a></li><!--usiamo cancelletto + nome id per ancoraggio -->
+              <hr>
+              <li><span class="material-icons">school</span><a href="myResume.html">MY RESUME</a></li>
+              <hr>
+              <li><span class="material-icons">important_devices</span><a href="#box2">CERVICES</a></li>
+              <hr>
+              <li><span class="material-icons" >device_hub</span><a href="#box4">CONTACTS</a></li>
+              <hr>
+            </ul>
+          </nav>
+        <img class="myFoto" src="css/images/io.jpg" alt="my foto">
+      </div>
+    </div>
+    <div id="smallBar">
+      <div id="mySidebarSmall" class="sidebar">
+        <section id="titelLeftSide">
+          <a href="index.html">
+            <div class="lighteName">
+              <h1 class="name">TARAS</h1>
+            </div>
+            <div class="lighteSorname">
+              <h1 class="sorname">MYKHAYLOVSKYY</h1>
+            </div>
+          </a>
+          <h4>{ The more technology I learn, <br> the more I realize <br> how little I know... }</h4>
+        </section>
+        <nav>
+          <ul id="menuNav">
+            <li>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </li>
+            <li><span class="material-icons">roofing</span><a href="#main-content" onclick="closeNav()">HOME</a></li>
+            <hr>
+            <li><span class="material-icons">self_improvement</span><a href="#box1" onclick="closeNav()">ABOUT ME</a></li><!--usiamo cancelletto + nome id per ancoraggio -->
+            <hr>
+            <li><span class="material-icons">school</span><a href="myResume.html">MY RESUME</a></li>
+            <hr>
+            <li><span class="material-icons">important_devices</span><a href="#box2" onclick="closeNav()">CERVICES</a></li>
+            <hr>
+            <li><span class="material-icons" >device_hub</span><a href="#box4" onclick="closeNav()">CONTACTS</a></li>
+            <hr>
+          </ul>
+        </nav>
+        <img class="myFoto" src="css/images/io.jpg" alt="my foto">
+    </div>
+  </header>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()"> ☰ </button>  
+  </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebarSmall").style.width = "230px";
+        document.getElementById("main").style.marginLeft = "230px";
+      }
+                 
+      function closeNav() {
+        document.getElementById("mySidebarSmall").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+    </script>
+
+                  <!--******* M A I N *******-->
+    <main id="main-content" class="clearfix">
+     <!--******* A B O U T *******-->
+       <section id="box1"><!--con classe clearfix facciamo in modo che il footer resta al suo posto-->
+            <h2 class="title">Ciao! Mi chiamo Taras Mykhaylovskyy.</h2>
+            <hr>
+            <div class="profText">
+               <p>Sono sviluppatore Front End free lance dal 2019. Mi dedico allo studio di questa fantastica professione dal 2018. <br> 
+                Sono un ex operaio che ha deciso di riprendere gli studi e cambiare la rotta della propria vita. </p>
+               <p>Dopo anni passati a studiare i vari rami di informatica, e persino robotica, ho 
+                 capito che la mia vera passione è per lo sviluppo web. Amo veramente questo lavoro. E' un mastiere che lascia tanto spazzio alla immaginazione
+                creativa e quella sintetica. Ragione per cui ogni proggetto affidatomi sarà ricco di passione da parte mia. Sono un classico autodidatta che tenta di trasformare la
+                 propria passione in una professione. In oltre sono uomo di parola, faccio sempre esettamente quello che dico.</p>
+            </div>
+        </section>
+              <!--******* S E R V I C E S *******-->
+          <section id="box2">
+            <h2 class="title">I miei servizzi:</h2>
+            <hr>
+            <div class="profText">
+              <h3>Creazione di una pagina web...</h3>
+              <p> Perche è importante giorno d'oggi avere una pagina web per una attività commerciale, piccola, media, o grande che sia?? Sediamoci, senza nessun impegno, parliamo e decidiamo insieme cosa è meglio per Lei e la sua azienda. Cosa possiamo fare, con il mio aiuto, per migliorare il suo andamento e come possiamo otenere il miglior risultato spendendo meno possibile il suo tempo e il suo denaro. </p>
+              <p>Secondo me, un sito web dev'essere prima di tutto funzionale, cio è comodo, chiaro e semplice per navigare da qualsiasi aparecchio smart, compiuter, cellulare, o tabblet, e solo dopo bello da vedere. Cosa ne pensi?? </p>
+              <h3>Quel mondo misterioso chiamato Internet...</h3>
+              <p> Per smettere di avere paura di una cosa basta conoscerla meglio. <br> Giorno d'oggi digitalizzazione invade le nostre vite quotidiane sempre di piu. Firma digitale, PEC, una casella email, 5G, televisione via internet, anti virus, router, ALEXA, smartdomotica, TV smart... Come si usa??? Aiuto!! In questa era di computer e accessori smart, certe persone si sentono un po spaesate e abbandonate a sestesse. Vi guidero volentieri passo dopo passo per scoprire che il mondo digitale non fa paura, è accessibile per tutti ed è pensato per semplifficare la nostra vita. </p>
+              <h3>Voglia di imparare a programmare???</h3>
+              <p>Perche no. Ti insegnierò con piacere le basi di HTML, CSS, SASS, JavaScript o WordPress. E se prendi gusto aprofondiremo insieme.</p>
+            </div>
+          </section>
+          <!--******* C O N T A C T S *******-->
+          <section id="box4"><!-- hai invertito i box3 con box4. per questo non sono in ordine -->
+            <h2 class="title">Contatti.</h2>
+            <hr>
+            <div class="profText">
+              <h3>Sto pensando di fare una pagina web per la mia azienda...</h3>
+              <p> Ottima idea! <br> Da dove cominciare?? Quanto costa?? Come funziona?? <br> Sono tutte domande importanti. Contattami, ti spieghero passo a passo come funziona.  </p>
+            </div>
+            <div class="myContacts">
+              <div class="links">
+                <img src="https://img.icons8.com/doodle/48/000000/ringing-phone.png"/><a href="tel:+393480602873">my Phone</a>
+              </div>
+              <div class="links">
+                <img src="https://img.icons8.com/material-outlined/24/fa314a/gmail-login.png"/><a href="mailto:taras.m780@gmail.com">my Email</a>
+              </div>
+              <div class="links">
+                <img src="https://img.icons8.com/officexs/16/000000/skype.png"/><a href="skype:Taras Mykhaylovskyy">my Skype</a>
+              </div>
+            </div>
+          </section>
+    </main>
+              <!--******* F O O T E R *******-->
+    <footer>
+      <section id="footerBox">
+        <div class="footerLink">
+          <div class="links">
+            <img src="https://img.icons8.com/doodle/48/000000/ringing-phone.png"/><a href="tel:+393480602873">my Phone</a>
+          </div>
+          <div class="links">
+            <img src="https://img.icons8.com/material-outlined/24/fa314a/gmail-login.png"/><a href="mailto:taras.m780@gmail.com">my Email</a>
+          </div>
+          <div class="links">
+            <img src="css/images/icons8-github-40.png"/><a href="https://github.com/Phobos780">my GitHub</a>
+          </div>
+          <div class="links">
+            <img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/><a href="https://it.linkedin.com/in/taras-sviluppatore-frontend?trk=profile-badge">my LinkedIn</a>
+          </div>
+          <div class="links">
+            <img src="https://img.icons8.com/officexs/16/000000/skype.png"/><a href="skype:Taras Mykhaylovskyy">my Skype</a>
+          </div>
+        </div>
+        <div class="footerText">
+          <p class="text1"><span class="material-icons">copyright</span> 2021 Taras Mykhaylovskyy. Grazie per la visita. </p>
+        </div>
+        <div class="myLogo">
+          <img src="css/images/MyLogo.jpeg" alt="logo">
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
