@@ -445,8 +445,12 @@ header img {
   /********** SDB END **********/
 }
 
+#footerBox {
+  width: 100%;
+}
+
 /**************************************************************************/
-@media only screen and (min-width: 999px) {
+@media only screen and (min-width: 1277px) {
   nav .closebtn {
     display: none;
   }
