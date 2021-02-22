@@ -93,7 +93,7 @@ header{
     flex-direction: column;
     top: 0;/*cosi header è attacato su*/
     background-color: $bodyColor;
-    border-right: 1px solid #528415;
+    border-right: 1px solid #d13a0c;
     height: 100%;
     width: 270px;
     position: fixed;/*permette di fissare il header sul lato sinistro*/
@@ -627,7 +627,7 @@ header{
   }
 }
     #main {
-      transition: margin-left .5s;
+      transition: margin-left 2.5s;
       padding: 16px;
 
     }
