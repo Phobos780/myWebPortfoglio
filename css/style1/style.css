@@ -48,7 +48,7 @@ header #mySidebarSmall {
   top: 0;
   /*cosi header è attacato su*/
   background-color: #3a3a2c;
-  border-right: 1px solid #528415;
+  border-right: 1px solid #d13a0c;
   height: 100%;
   width: 270px;
   position: fixed;
@@ -670,8 +670,8 @@ header img {
     width: 200px;
   }
   #main {
-    -webkit-transition: margin-left .5s;
-    transition: margin-left .5s;
+    -webkit-transition: margin-left 2.5s;
+    transition: margin-left 2.5s;
     padding: 16px;
   }
   body .openbtn {
