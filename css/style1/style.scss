@@ -88,38 +88,41 @@ a{
         */
 
 header{
-  #mySidebarSmall{
-    display: flex;
-    flex-direction: column;
-    top: 0;/*cosi header è attacato su*/
-    background-color: $bodyColor;
-    border-right: 1px solid #d13a0c;
-    height: 100%;
-    width: 270px;
-    position: fixed;/*permette di fissare il header sul lato sinistro*/
-
-    #titelLeftSide {
-      h4{
-        margin-top: 7px;
-        margin-bottom: 3px;
-        text-align: center;
-        color: $titleNavColor1;
-        font-size: 25px;
-        font-family: 'Dancing Script', cursive;
-      }
-
-      .name{
-        @include title(9px, 3rem, 5px, $titleNavColor1);
-        margin-bottom: auto;
-
-      }
-
-      .sorname{
-        @include title(9px, 3rem, 5px, #2db300);
-
+  #bigBar{
+    #mySidebar{
+      display: flex;
+      flex-direction: column;
+      top: 0;/*cosi header è attacato su*/
+      background-color: $bodyColor;
+      border-right: 1px solid #d13a0c;
+      height: 100%;
+      width: 270px;
+      position: fixed;/*permette di fissare il header sul lato sinistro*/
+  
+      #titelLeftSide {
+        h4{
+          margin-top: 7px;
+          margin-bottom: 3px;
+          text-align: center;
+          color: $titleNavColor1;
+          font-size: 25px;
+          font-family: 'Dancing Script', cursive;
+        }
+  
+        .name{
+          @include title(9px, 3rem, 5px, $titleNavColor1);
+          margin-bottom: auto;
+  
+        }
+  
+        .sorname{
+          @include title(9px, 3rem, 5px, #2db300);
+  
+        }
       }
     }
   }
+
   nav{
     #menuNav{
       font-family: 'Lexend Zetta', sans-serif;
@@ -180,7 +183,7 @@ header{
   #box1{// M A I N
     @include boxRighte(-20px, 5px, 0px);
     hr{
-      @include decoration-line($titleRighteColor, 755px, 3px, 11px);
+      @include decoration-line($titleRighteColor, auto, 3px, 11px);
     }
     .profText{
       padding: 5px;
@@ -190,7 +193,7 @@ header{
   #box2{// S E R V I C E S
     @include boxRighte(40px, -190px, 180px);
     hr{
-      @include decoration-line($titleRighteColor, 290px, 3px, 11px)
+      @include decoration-line($titleRighteColor, auto, 3px, 11px)
     }
     .profText{
       padding: 5px;
@@ -203,7 +206,7 @@ header{
   #box4{// C O N T A C T S
     @include boxRighte(40px, -20px, 0px);
     hr{
-      @include decoration-line($titleRighteColor, 180px, 3px, 11px);
+      @include decoration-line($titleRighteColor, auto, 3px, 11px);
     }
     .profText{
       padding: 5px;
@@ -302,6 +305,7 @@ header{
   }
 }
 
+/***********************************************************************************************************************************************************************************************************************************/
 
                 /**********************************************
               **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
@@ -309,6 +313,117 @@ header{
                 **********************************************/
 
   @media only screen and (min-width: 768px) {
+
+ 
+    header{
+      #bigBar{
+        display: none;
+      }
+    }
+
+    header {
+      #smallBar{
+        #mySidebarSmall{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          opacity: .94;
+          top: 0;
+          left: 0;
+          background-color: $bodyColor;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 10px;
+          border-right: 1px solid #528415;
+    
+        #titelLeftSide {
+          .name{
+            @include title(9px, 2.7rem, 5px, $titleNavColor1);
+            margin-bottom: auto;
+                
+          }
+    
+          .sorname {
+            @include title(9px, 2.7rem, 5px, #2db300);
+    
+          }
+
+          h4{
+            margin-top: 7px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: $titleNavColor1;
+            font-size: 1.7rem;
+            font-family: 'Dancing Script', cursive;
+          }
+        }
+        #menuNav{
+          .closebtn {
+            position: absolute;            
+            top: 5px;
+            right: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: black;
+            color: #bbff33;
+            padding: 5px 10px 8px 10px;
+            border: none;
+    
+          }
+
+          .material-icons{/*mini icona di fianco al num di cell*/
+            font-size: 23px;
+            color: $titleNavColor1;
+            float: left;
+          }
+
+          li{
+            a{
+              padding: 2px 8px 8px 20px;
+              color: #09d3a0;
+              font-size: 1.2rem;/*dimensioni testo*/
+              text-transform: uppercase;/*tutto il testo maiuscolo*/
+              
+              display: block;
+              transition: 0.3s;
+            }
+          }
+          hr {
+            @include decoration-line(#0ACE99, 25px, 3px, 1px);
+            margin-top: 5px;
+          }
+        }      
+          .myFoto{
+            @include myPicture(25px, 13px, 200px);
+          }
+    }
+  }
+}
+  
+
+  body{
+    .openbtn {
+      position: absolute;
+      //position: fixed;
+      //opacity: .5;
+      top: 15px;
+      left: 15px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #111;
+      color: #09d3a0;
+      padding: 10px 15px;
+      border: none;
+    }
+  }
+
+
+          /********** SDB END **********/
+
+
 
     
   }
@@ -339,6 +454,11 @@ header{
       }
     }
 
+    header{
+      #bigBar{
+        display:inherit;
+      }
+    }
 
     
 header{
@@ -511,14 +631,14 @@ header{
 
   #titelLeftSide h4 {
     opacity: 0;
-    animation-name: hero-btn;
+    animation-name: fraseH4;
     animation-duration: 1.5s;
     animation-delay: 2s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
 
-  @keyframes hero-btn{
+  @keyframes fraseH4{
     0%{
       opacity: 0;
       transform: translatey(-50px);
@@ -554,7 +674,7 @@ header{
           position: fixed;
           z-index: 1;
           opacity: .94;
-          top: 0;/*cosi header è attacato su*/
+          top: 0;
           left: 0;
           background-color: $bodyColor;
           overflow: hidden;
@@ -626,11 +746,7 @@ header{
     }
   }
 }
-    #main {
-      transition: margin-left 2.5s;
-      padding: 16px;
 
-    }
   
 
   body{
@@ -662,14 +778,13 @@ header{
         ************************************
         */
   #main-content{
-    margin-top: 50px;
+    margin-top: 70px;
     float: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     width: auto;
-    //padding: 30px;
     font-family: 'Kalam', cursive;
     font-size: 1.3rem;
     h2{
