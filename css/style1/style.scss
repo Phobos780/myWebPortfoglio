@@ -3,7 +3,7 @@
 
         /*************** G E N E R A L ***************/
 
-*{/*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
+*{
    box-sizing: border-box;
 }
 
@@ -105,7 +105,7 @@ header{
           margin-bottom: 3px;
           text-align: center;
           color: $titleNavColor1;
-          font-size: 25px;
+          font-size: 2rem;
           font-family: 'Dancing Script', cursive;
         }
   
@@ -218,7 +218,7 @@ header{
       display: flex;
       justify-content: space-around;
       padding: 5px;
-      //font-size: 15px;
+      font-size: 1.3rem;
       .links{
         @include links;
         a{
@@ -229,6 +229,7 @@ header{
       img{/*mini icona di fianco al num di cell*/
       float: left;
       width: 17px;
+      
       }
     }
   }
@@ -240,7 +241,7 @@ header{
           ******************************************
           */
 
-/************ beck to up button ******************/
+/************ beck to up button ***************/
 
 .btn{
   position: fixed;
@@ -268,7 +269,7 @@ header{
   width: 82.2%;
   border-top: 1px solid #528415;
   background-color: $bodyColor;
-  font-size: 13px;/*dimensione del testo*/
+  font-size: 1.2rem;/*dimensione del testo*/
   padding: 10px 0;/*definisco la ampiezza del box*/
   .footerText{
     text-align: center;
@@ -477,7 +478,7 @@ header{
             margin-bottom: 3px;
             text-align: center;
             color: $titleNavColor1;
-            font-size: 25px;
+            font-size: 2.2rem;
             font-family: 'Dancing Script', cursive;
           }
     
@@ -547,14 +548,9 @@ header{
     .links a:hover{
       background-color: #40f2c8;
       border-radius: 3px;
-      padding: 2px;
-      color: black;
     }
 
   }
-
-
-
 
           /*
       ******************************************
@@ -569,14 +565,54 @@ header{
   }
 
 
-  #footerBox{
-    
-    .links a:hover{
-      color: #40f2c8;
-      text-decoration: underline;
-    }
   
+#footerBox{
+  clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+  float: right;
+  width: 82.2%;
+  border-top: 1px solid #528415;
+  background-color: $bodyColor;
+  font-size: 1.1rem;/*dimensione del testo*/
+  padding: 10px 0;/*definisco la ampiezza del box*/
+  .footerText{
+    text-align: center;
+    .material-icons{/*mini icona di fianco al num di cell*/
+    font-size: 13px;
+    }
+    .text1{
+      padding-left: 14px;
+    }
   }
+  .footerLink{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+
+    .links{
+      @include links;
+      a{
+        color: $linkColor;
+        padding-left: 3px;
+      }
+    }
+    img{/*mini icona di fianco al num di cell*/
+    float: left;
+    width: 17px;
+    }
+  }
+  .myLogo{
+    text-align: center;
+    margin: 15px 50px 5px 50px;
+    img{
+      width: 170px;
+    }
+  }
+  .links a:hover{
+    color: #40f2c8;
+    text-decoration: underline;
+  }
+
+}
 
      /*************************************
         ======= K E Y F R A M E S =======
@@ -855,7 +891,7 @@ header{
         display: flex;
         justify-content: space-around;
         padding: 5px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         .links{
           @include links;
           a{
@@ -863,7 +899,7 @@ header{
             padding-left: 3px;
           }
         }
-        img{/*mini icona di fianco al num di cell*/
+        img{/*mini icona*/
         float: left;
         width: 12px;
         }
@@ -878,8 +914,7 @@ header{
           ******************************************
           */
 
-  .btn{
-    position: fixed;
+  .btn{ 
     bottom: 20px;
     right: 20px;
     width: 37px;
@@ -896,18 +931,16 @@ header{
   
   }
   
-
   #footerBox{
     clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
     width: 100%;
     border-top: 1px solid #528415;
-    font-size: 9px;/*dimensione del testo*/
-    //padding: 10px 0;/*definisco la ampiezza del box*/
+    font-size: .8rem;/*dimensione del testo*/
     .footerText{
       color: #ffad33;
       text-align: center;
       .material-icons{/*mini icona di fianco al num di cell*/
-      font-size: 13px;
+      font-size: 1.2rem;
       }
       .text1{
         padding-left: 7px;
@@ -927,7 +960,7 @@ header{
       }
       img{/*mini icona di fianco al num di cell*/
       float: left;
-      width: 9px;
+      width: 1rem;
       }
     }
     .myLogo{

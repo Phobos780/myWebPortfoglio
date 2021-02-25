@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*************** G E N E R A L ***************/
 * {
-  /*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -60,7 +59,7 @@ header #bigBar #mySidebar #titelLeftSide h4 {
   margin-bottom: 3px;
   text-align: center;
   color: #e79f04;
-  font-size: 25px;
+  font-size: 2rem;
   font-family: 'Dancing Script', cursive;
 }
 
@@ -236,6 +235,7 @@ header img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 5px;
+  font-size: 1.3rem;
 }
 
 #main-content #box4 .myContacts .links {
@@ -259,7 +259,7 @@ header img {
           *************** F O O T E R **************
           ******************************************
           */
-/************ beck to up button ******************/
+/************ beck to up button ***************/
 .btn {
   position: fixed;
   bottom: 20px;
@@ -285,7 +285,7 @@ header img {
   width: 82.2%;
   border-top: 1px solid #528415;
   background-color: #3a3a2c;
-  font-size: 13px;
+  font-size: 1.2rem;
   /*dimensione del testo*/
   padding: 10px 0;
   /*definisco la ampiezza del box*/
@@ -485,7 +485,7 @@ header img {
     margin-bottom: 3px;
     text-align: center;
     color: #e79f04;
-    font-size: 25px;
+    font-size: 2.2rem;
     font-family: 'Dancing Script', cursive;
   }
   header #bigBar #mySidebar #titelLeftSide .name {
@@ -556,8 +556,6 @@ header img {
   #main-content .links a:hover {
     background-color: #40f2c8;
     border-radius: 3px;
-    padding: 2px;
-    color: black;
   }
   /*
       ******************************************
@@ -567,6 +565,56 @@ header img {
   /************ beck to up button ******************/
   .btn:hover {
     height: 80px;
+  }
+  #footerBox {
+    clear: both;
+    /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    float: right;
+    width: 82.2%;
+    border-top: 1px solid #528415;
+    background-color: #3a3a2c;
+    font-size: 1.1rem;
+    /*dimensione del testo*/
+    padding: 10px 0;
+    /*definisco la ampiezza del box*/
+  }
+  #footerBox .footerText {
+    text-align: center;
+  }
+  #footerBox .footerText .material-icons {
+    /*mini icona di fianco al num di cell*/
+    font-size: 13px;
+  }
+  #footerBox .footerText .text1 {
+    padding-left: 14px;
+  }
+  #footerBox .footerLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 5px;
+  }
+  #footerBox .footerLink .links {
+    color: #bbff33;
+    padding: 5px 10px;
+  }
+  #footerBox .footerLink .links a {
+    color: #09906e;
+    padding-left: 3px;
+  }
+  #footerBox .footerLink img {
+    /*mini icona di fianco al num di cell*/
+    float: left;
+    width: 17px;
+  }
+  #footerBox .myLogo {
+    text-align: center;
+    margin: 15px 50px 5px 50px;
+  }
+  #footerBox .myLogo img {
+    width: 170px;
   }
   #footerBox .links a:hover {
     color: #40f2c8;
@@ -934,7 +982,7 @@ header img {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   #main-content #box4 .myContacts .links {
     color: #bbff33;
@@ -945,7 +993,7 @@ header img {
     padding-left: 3px;
   }
   #main-content #box4 .myContacts img {
-    /*mini icona di fianco al num di cell*/
+    /*mini icona*/
     float: left;
     width: 12px;
   }
@@ -955,7 +1003,6 @@ header img {
           ******************************************
           */
   .btn {
-    position: fixed;
     bottom: 20px;
     right: 20px;
     width: 37px;
@@ -976,7 +1023,7 @@ header img {
     /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
     width: 100%;
     border-top: 1px solid #528415;
-    font-size: 9px;
+    font-size: .8rem;
     /*dimensione del testo*/
   }
   #footerBox .footerText {
@@ -985,7 +1032,7 @@ header img {
   }
   #footerBox .footerText .material-icons {
     /*mini icona di fianco al num di cell*/
-    font-size: 13px;
+    font-size: 1.2rem;
   }
   #footerBox .footerText .text1 {
     padding-left: 7px;
@@ -1007,7 +1054,7 @@ header img {
   #footerBox .footerLink img {
     /*mini icona di fianco al num di cell*/
     float: left;
-    width: 9px;
+    width: 1rem;
   }
   #footerBox .myLogo {
     text-align: center;

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*************** G E N E R A L ***************/
 * {
-  /*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -49,9 +48,9 @@ body header h1 {
   text-align: center;
   font-weight: lighter;
   font-family: 'Lexend Zetta', sans-serif;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #bbff33;
-  font-size: 35px;
+  font-size: 3.5rem;
 }
 
 body header form {
@@ -119,13 +118,33 @@ body #mainContent #mineSection .boxCV table tr th {
           *************** F O O T E R **************
           ******************************************
           */
+/************ beck to up button ******************/
+.btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: .5;
+  z-index: 1;
+}
+
 #footerBoxCV {
   position: relative;
   clear: both;
   /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
   width: 100%;
   border-top: 1px solid #528415;
-  font-size: 13px;
+  font-size: 1.2rem;
   /*dimensione del testo*/
 }
 
@@ -204,8 +223,8 @@ body #mainContent #mineSection .boxCV table tr th {
 @media only screen and (min-width: 999px) {
   body header button:hover {
     background: #eeea09;
-    -webkit-transition: .9s;
-    transition: .9s;
+    -webkit-transition: .5s;
+    transition: .5s;
     color: black;
   }
   footer #footerBoxCV .links a:hover {
@@ -215,9 +234,30 @@ body #mainContent #mineSection .boxCV table tr th {
   }
   footer #footerBoxCV .cvButton button:hover {
     background: #eeea09;
-    -webkit-transition: .9s;
-    transition: .9s;
+    -webkit-transition: .5s;
+    transition: .5s;
     color: black;
+  }
+  /************ beck to up button ******************/
+  .btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: .5;
+  }
+  .btn:hover {
+    height: 80px;
   }
 }
 
@@ -241,9 +281,9 @@ body #mainContent #mineSection .boxCV table tr th {
     text-align: center;
     font-weight: lighter;
     font-family: 'Lexend Zetta', sans-serif;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #bbff33;
-    font-size: 20px;
+    font-size: 1.9rem;
   }
   body header form {
     position: absolute;
@@ -302,13 +342,31 @@ body #mainContent #mineSection .boxCV table tr th {
           *************** F O O T E R **************
           ******************************************
           */
+  /************ beck to up button ******************/
+  .btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: .5;
+  }
   #footerBoxCV {
     position: relative;
     clear: both;
     /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
     width: 100%;
     border-top: 1px solid #528415;
-    font-size: 9px;
+    font-size: .8rem;
     /*dimensione del testo*/
   }
   #footerBoxCV .footerText {
@@ -364,9 +422,4 @@ body #mainContent #mineSection .boxCV table tr th {
     border: 3px solid #eeea09;
   }
 }
-
-/*************************************
-                 ======= K E Y F R A M E S =======
-                ======= A N I M A T I O N S =======
-              *************************************/
 /*# sourceMappingURL=style.css.map */

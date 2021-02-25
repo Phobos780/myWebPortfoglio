@@ -3,14 +3,11 @@
 
         /*************** G E N E R A L ***************/
 
-*{/*lezione 51 float. con asterisco selezioniamo tutti elementi della pagina, con border box facciamo si che tutti gli elemnti ocupino il 50% (in questo caso) di spazio, cioè anche se noi modifichiamo il padding o margin l'oggetto non va ad aumentare o calere il precentuale ma si modiffica sempre e comunque in quei 50% di pazio consentitoli */
+*{
    box-sizing: border-box;
 }
 
 $linkColor: #09906e;
-$titleNavColor1: #e79f04;
-$bodyColor: #3a3a2c;
-$bodyTexColor: #ffad33;
 $titleRighteColor: #bbff33;
 
 @mixin backBtn {
@@ -25,42 +22,11 @@ $titleRighteColor: #bbff33;
   transition: 0.7s;
 }
 
-@mixin decoration-line($color, $width, $gauge, $marginLeft){
-  border: 0;
-  border-top: $gauge solid $color;
-  margin-left: $marginLeft;
-  margin-top: 10px;
-  width: $width;
-}
-
-@mixin myPicture($marginTop, $marginLeft, $width){
-  border-radius: 100%;
-  margin-top: $marginTop;
-  margin-left: $marginLeft;
-  width: $width;
-}
-
-@mixin title($margin, $marginTop, $color){
-  text-align: center;
-  margin: $margin;
-  font-family: 'Bebas Neue', cursive;
-  margin-top: $marginTop;
-  color: $color;
-}
-
 @mixin titleRighte{
   font-weight: lighter;
   font-family: 'Lexend Zetta', sans-serif;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: $titleRighteColor;
-}
-@mixin boxRighte($marginTop, $marginLeft, $marginRighte){
-  margin-right: $marginRighte;
-  margin-left: $marginLeft;
-  margin-top: $marginTop;
-  background-color: #494937;
-  box-shadow: 0px 0px 5px 13px rgba(29, 29, 22, 0.5);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
-  border-radius: 7px;
 }
 
 @mixin links{
@@ -108,7 +74,7 @@ body{
       h1{
         text-align: center;
         @include titleRighte;
-        font-size: 35px;                
+        font-size: 3.5rem;                
       }      
       form{
         position: absolute;
@@ -152,22 +118,43 @@ body{
   }
 }
 
-
-
-
           /*
           ******************************************
           *************** F O O T E R **************
           ******************************************
           */
           
+/************ beck to up button ******************/
+
+.btn{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  opacity: .5;
+  z-index: 1;
+
+
+}
+
+
+
 
 #footerBoxCV{
   position: relative;//serve per bottone "back"
   clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
   width: 100%;
   border-top: 1px solid #528415;
-  font-size: 13px;/*dimensione del testo*/
+  font-size: 1.2rem;/*dimensione del testo*/
   //padding: 10px 0;/*definisco la ampiezza del box*/
   .footerText{
     color: #ffad33;
@@ -210,7 +197,7 @@ body{
       bottom: 25px;
       left: 15px;
       button{
-        @include backBtn;
+      @include backBtn;
 
       }
     }
@@ -223,15 +210,12 @@ body{
                               === RESPONSIVE ===
                 **********************************************/
 
-@media only screen and (min-width: 768px) {
-}
-
 @media only screen and (min-width: 999px) {
 
   body header{
     button:hover{
       background: #eeea09;
-      transition: .9s;
+      transition: .5s;
       color: black;
     }
   }
@@ -244,11 +228,35 @@ body{
     .cvButton {
       button:hover{
         background: #eeea09;
-        transition: .9s;
+        transition: .5s;
         color: black;
       }
     }
   }
+
+  /************ beck to up button ******************/
+
+.btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  opacity: .5;
+
+}
+.btn:hover{
+  height: 80px;
+}
+
 }
 
 
@@ -273,7 +281,7 @@ body{
         h1{
           text-align: center;
           @include titleRighte;
-          font-size: 20px;                
+          font-size: 1.9rem;                
         }      
         form{
           position: absolute;
@@ -328,23 +336,44 @@ body{
     }
   }
         
-
-
-
                 /*
           ******************************************
           *************** F O O T E R **************
           ******************************************
           */
           
+      
+/************ beck to up button ******************/
+
+.btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 37px;
+  height: 37px;
+  font-size: 1.5rem;
+  background-color: #2eb82e;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  opacity: .5;
+
+}
+
+
+
+
+
 
   #footerBoxCV{
     position: relative;//serve per bottone "back"
     clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
     width: 100%;
     border-top: 1px solid #528415;
-    font-size: 9px;/*dimensione del testo*/
-    //padding: 10px 0;/*definisco la ampiezza del box*/
+    font-size: .8rem;/*dimensione del testo*/
     .footerText{
       color: #ffad33;
       text-align: center;
@@ -359,7 +388,6 @@ body{
       display: flex;
       justify-content: space-around;
       
-
       .links{
         color: $titleRighteColor;
         padding: 5px 1px;
@@ -399,10 +427,3 @@ body{
     }
   }
 }
-
-
-
-              /*************************************
-                 ======= K E Y F R A M E S =======
-                ======= A N I M A T I O N S =======
-              *************************************/
