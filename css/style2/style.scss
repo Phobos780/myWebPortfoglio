@@ -74,11 +74,11 @@ body{
       h1{
         text-align: center;
         @include titleRighte;
-        font-size: 3.5rem;                
+        font-size: 3.1rem;                
       }      
       form{
         position: absolute;
-        top: 20px;
+        top: 10px;
         left: 10px;
         button{
           @include backBtn;
@@ -127,7 +127,7 @@ body{
 /************ beck to up button ******************/
 
 .btn{
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
@@ -237,7 +237,6 @@ body{
   /************ beck to up button ******************/
 
 .btn{
-  position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
@@ -285,7 +284,7 @@ body{
         }      
         form{
           position: absolute;
-          top: 70px;
+          top: 80px;
           left: 10px;
           button{
             border: none;
