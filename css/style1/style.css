@@ -151,6 +151,10 @@ header img {
   margin-bottom: -2px;
 }
 
+#main-content p {
+  margin-top: 3px;
+}
+
 #main-content #box1 {
   margin-right: 0px;
   margin-left: 5px;
@@ -195,10 +199,6 @@ header img {
 
 #main-content #box2 .profText {
   padding: 5px;
-}
-
-#main-content #box2 .profText p {
-  margin-top: 3px;
 }
 
 #main-content #box4 {

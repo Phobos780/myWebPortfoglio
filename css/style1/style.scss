@@ -179,7 +179,9 @@ header{
     font-family: 'Caveat', cursive;
     margin-bottom: -2px;
   }
-
+  p{
+    margin-top: 3px;
+  }
   #box1{// M A I N
     @include boxRighte(-20px, 5px, 0px);
     hr{
@@ -197,9 +199,6 @@ header{
     }
     .profText{
       padding: 5px;
-      p{
-        margin-top: 3px;
-      }
     }
   }
 
