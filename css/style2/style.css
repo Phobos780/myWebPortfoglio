@@ -221,11 +221,18 @@ body #mainContent #mineSection .boxCV table tr th {
                               === RESPONSIVE ===
                 **********************************************/
 @media only screen and (min-width: 999px) {
+  body header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
   body header button:hover {
     background: #eeea09;
     -webkit-transition: .5s;
     transition: .5s;
     color: black;
+  }
+  footer #footerBoxCV {
+    margin-top: 50px;
   }
   footer #footerBoxCV .links a:hover {
     /*pseudo class. qando passiamo con mous suopra cambia colore*/
@@ -272,11 +279,12 @@ body #mainContent #mineSection .boxCV table tr th {
     background-size: cover;
     background-attachment: fixed;
   }
-  body header {
+  body #header {
+    margin-top: 20px;
     border-bottom: thick double #bbff33;
-    margin-bottom: 45px;
+    margin-bottom: 55px;
   }
-  body header h1 {
+  body #header h1 {
     text-align: center;
     font-weight: lighter;
     font-family: 'Lexend Zetta', sans-serif;
@@ -284,12 +292,12 @@ body #mainContent #mineSection .boxCV table tr th {
     color: #bbff33;
     font-size: 1.9rem;
   }
-  body header form {
+  body #header form {
     position: absolute;
-    top: 80px;
+    top: 85px;
     left: 10px;
   }
-  body header form button {
+  body #header form button {
     border: none;
     border-radius: 10px;
     color: #e8ec14;
@@ -360,6 +368,7 @@ body #mainContent #mineSection .boxCV table tr th {
     opacity: .5;
   }
   #footerBoxCV {
+    margin-top: 30px;
     position: relative;
     clear: both;
     /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/

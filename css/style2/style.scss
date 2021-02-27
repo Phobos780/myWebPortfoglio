@@ -213,6 +213,8 @@ body{
 @media only screen and (min-width: 999px) {
 
   body header{
+    margin-top: 30px;
+    margin-bottom: 50px;
     button:hover{
       background: #eeea09;
       transition: .5s;
@@ -221,6 +223,7 @@ body{
   }
 
   footer #footerBoxCV{
+    margin-top: 50px;
     .links a:hover{/*pseudo class. qando passiamo con mous suopra cambia colore*/
       color: #40f2c8;
       text-decoration: underline;
@@ -274,9 +277,10 @@ body{
     background-image: url(../images/p2.jpg);
     background-size: cover;
     background-attachment: fixed;
-      header{
+      #header{
+        margin-top: 20px;
         border-bottom: thick double #bbff33;
-        margin-bottom: 45px;
+        margin-bottom: 55px;
         h1{
           text-align: center;
           @include titleRighte;
@@ -284,7 +288,7 @@ body{
         }      
         form{
           position: absolute;
-          top: 80px;
+          top: 85px;
           left: 10px;
           button{
             border: none;
@@ -362,12 +366,8 @@ body{
 
 }
 
-
-
-
-
-
   #footerBoxCV{
+    margin-top: 30px;
     position: relative;//serve per bottone "back"
     clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
     width: 100%;
