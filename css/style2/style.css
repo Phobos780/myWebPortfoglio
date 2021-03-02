@@ -220,6 +220,38 @@ body #mainContent #mineSection .boxCV table tr th {
               **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
                               === RESPONSIVE ===
                 **********************************************/
+/**************************************************************************/
+@media only screen and (min-width: 668px) {
+  body td img, #mineSection td img, #cvPicture td img {
+    float: right;
+    width: 170px;
+    padding: 3px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #068d23;
+  }
+  /************ beck to up button ******************/
+  .btn {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: .5;
+  }
+  .btn:hover {
+    height: 80px;
+  }
+}
+
 @media only screen and (min-width: 999px) {
   body header {
     margin-top: 30px;
@@ -230,6 +262,14 @@ body #mainContent #mineSection .boxCV table tr th {
     -webkit-transition: .5s;
     transition: .5s;
     color: black;
+  }
+  body td img, #mineSection td img, #cvPicture td img {
+    float: right;
+    width: 250px;
+    padding: 3px;
+    margin: 7px;
+    border-radius: 10px;
+    border: 2px solid #068d23;
   }
   footer #footerBoxCV {
     margin-top: 50px;
@@ -268,12 +308,20 @@ body #mainContent #mineSection .boxCV table tr th {
 }
 
 /**************************************************************************/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 667px) {
   /*
   ************************************
   ************** M A I N *************
   ************************************
   */
+  body td img, #mineSection td img, #cvPicture td img {
+    float: right;
+    width: 110px;
+    padding: 2px;
+    margin: 5px -5px 5px 5px;
+    border-radius: 10px;
+    border: 2px solid #068d23;
+  }
   body {
     background-image: url(../images/p2.jpg);
     background-size: cover;
