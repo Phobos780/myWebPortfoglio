@@ -52,23 +52,7 @@
     <link rel="stylesheet" href="css/style2/style.css">
   </head>
 
-  <body>
-
-        <!--BUTTON UP-->
-        <button class="btn">up<i class="fa fa-arrow-up"></i></button>
-        <script>
-            let btn= document.querySelector('.btn');
-            btn.addEventListener('click',function(){
-                window.scrollTo({
-                    top: 0,
-                    left: 0,
-                    behavior: "smooth"
-                })
-            })
-        </script>
-    
-
-
+  <body>    
     <header id="header">
       <h1>Il mio curriculum.</h1>       
         <form action="index.html">
@@ -267,5 +251,18 @@
         </div>
       </section>
     </footer>
+    
+      <!--BUTTON UP-->
+      <button class="btn">up<i class="fa fa-arrow-up"></i></button>
+      <script>
+          let btn= document.querySelector('.btn');
+          btn.addEventListener('click',function(){
+              window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth"
+              })
+          })
+      </script>
   </body>
 </html>

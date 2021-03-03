@@ -62,13 +62,11 @@ a{
   display: table;
 }
 
-
         /*
         ************************************
         ************** M A I N *************
         ************************************
         */
-
 
 body{
   background-image: url(../images/p1-1.jpg);
@@ -151,9 +149,6 @@ body{
 
 }
 
-
-
-
 #footerBoxCV{
   position: relative;//serve per bottone "back"
   clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
@@ -208,14 +203,11 @@ body{
     }
   }
 }
-          
-/**************************************************************************/
+
                 /**********************************************
               **** M E D I A   Q U E R Y S   LE Z I O N E 55 ****
                               === RESPONSIVE ===
-                **********************************************/
-                
-
+                **********************************************/               
 /**************************************************************************/
 @media only screen and (min-width: 668px) {
 
@@ -265,7 +257,6 @@ body{
     }    
   }
 
-
    body #mainContent{
       #mineSection{  
         .boxCV{
@@ -288,10 +279,6 @@ body{
       }
     }
   }
-
-
-
-
 
                /*
           ******************************************
@@ -381,8 +368,6 @@ body{
   }
 }
 
-
-
 /**************************************************************************/
 @media only screen and (min-width: 999px) {
 
@@ -425,29 +410,28 @@ body{
     }
   }
 
-    /************ beck to up button ******************/
+      /************ beck to up button ******************/
 
-  .btn{
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 2rem;
-    background-color: #2eb82e;
-    color: black;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.4s;
-    opacity: .5;
+    .btn{
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+      background-color: #2eb82e;
+      color: black;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.4s;
+      opacity: .5;
 
+    }
+    .btn:hover{
+      height: 80px;
+    }
   }
-  .btn:hover{
-    height: 80px;
-  }
-}
-
 
 /**************************************************************************/
 @media only screen and (max-width: 667px) {
