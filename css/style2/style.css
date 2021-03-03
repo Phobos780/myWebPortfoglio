@@ -363,11 +363,7 @@ body #mainContent #mineSection .boxCV table tr th {
 
 /**************************************************************************/
 @media only screen and (min-width: 999px) {
-  body header {
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-  body header button:hover {
+  body #header form button:hover {
     background: #eeea09;
     -webkit-transition: .5s;
     transition: .5s;
@@ -383,9 +379,9 @@ body #mainContent #mineSection .boxCV table tr th {
   }
   footer #footerBoxCV {
     margin-top: 50px;
+    font-size: 1.1rem;
   }
   footer #footerBoxCV .links a:hover {
-    /*pseudo class. qando passiamo con mous suopra cambia colore*/
     color: #40f2c8;
     text-decoration: underline;
   }

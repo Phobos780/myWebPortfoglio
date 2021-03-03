@@ -251,8 +251,7 @@ body{
         margin: -15px 5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
-        
-        
+                
       }
     }    
   }
@@ -371,9 +370,7 @@ body{
 /**************************************************************************/
 @media only screen and (min-width: 999px) {
 
-  body header{
-    margin-top: 30px;
-    margin-bottom: 50px;
+  body #header form{
     button:hover{
       background: #eeea09;
       transition: .5s;
@@ -397,7 +394,8 @@ body{
 
   footer #footerBoxCV{
     margin-top: 50px;
-    .links a:hover{/*pseudo class. qando passiamo con mous suopra cambia colore*/
+    font-size: 1.1rem;
+    .links a:hover{
       color: #40f2c8;
       text-decoration: underline;
     }

@@ -543,53 +543,53 @@ header{
     height: 80px;
   }
   
-#footerBox{
-  clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
-  float: right;
-  width: 82.2%;
-  border-top: 1px solid #528415;
-  background-color: $bodyColor;
-  font-size: 1.1rem;/*dimensione del testo*/
-  padding: 10px 0;/*definisco la ampiezza del box*/
-  .footerText{
-    text-align: center;
-    .material-icons{/*mini icona di fianco al num di cell*/
-    font-size: 13px;
-    }
-    .text1{
-      padding-left: 14px;
-    }
-  }
-  .footerLink{
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-
-    .links{
-      @include links;
-      a{
-        color: $linkColor;
-        padding-left: 3px;
+  #footerBox{
+    clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    float: right;
+    width: 82.2%;
+    border-top: 1px solid #528415;
+    background-color: $bodyColor;
+    font-size: 1.1rem;/*dimensione del testo*/
+    padding: 10px 0;/*definisco la ampiezza del box*/
+    .footerText{
+      text-align: center;
+      .material-icons{/*mini icona di fianco al num di cell*/
+      font-size: 13px;
+      }
+      .text1{
+        padding-left: 14px;
       }
     }
-    img{/*mini icona di fianco al num di cell*/
-    float: left;
-    width: 17px;
-    }
-  }
-  .myLogo{
-    text-align: center;
-    margin: 15px 50px 5px 50px;
-    img{
-      @include myLogo;
-    }
-  }
-  .links a:hover{
-    color: #40f2c8;
-    text-decoration: underline;
-  }
+    .footerLink{
+      display: flex;
+      justify-content: space-around;
+      padding: 5px;
 
-}
+      .links{
+        @include links;
+        a{
+          color: $linkColor;
+          padding-left: 3px;
+        }
+      }
+      img{/*mini icona di fianco al num di cell*/
+      float: left;
+      width: 17px;
+      }
+    }
+    .myLogo{
+      text-align: center;
+      margin: 15px 50px 5px 50px;
+      img{
+        @include myLogo;
+      }
+    }
+    .links a:hover{
+      color: #40f2c8;
+      text-decoration: underline;
+    }
+
+  }
 
      /*************************************
         ======= K E Y F R A M E S =======
