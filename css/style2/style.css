@@ -193,7 +193,7 @@ body #mainContent #mineSection .boxCV table tr th {
 }
 
 #footerBoxCV .myLogo img {
-  width: 200px;
+  width: 110px;
 }
 
 #footerBoxCV .cvButton form {
@@ -222,21 +222,72 @@ body #mainContent #mineSection .boxCV table tr th {
                 **********************************************/
 /**************************************************************************/
 @media only screen and (min-width: 668px) {
+  /************** HEADER **************/
+  #header {
+    margin-top: 20px;
+    border-bottom: thick double #bbff33;
+    margin-bottom: 55px;
+  }
+  #header h1 {
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 2.5rem;
+    color: #bbff33;
+    font-size: 2.3rem;
+  }
+  #header form {
+    position: absolute;
+    top: 95px;
+    left: 10px;
+  }
+  #header form button {
+    border: none;
+    border-radius: 10px;
+    color: #e8ec14;
+    padding: 5px 9px;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #080801;
+    border: 3px solid #eeea09;
+  }
+  /************* MAINE ***************/
   body td img, #mineSection td img, #cvPicture td img {
     float: right;
     width: 170px;
     padding: 3px;
-    margin: 5px;
+    margin: -15px 5px 5px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
+  body #mainContent #mineSection .boxCV table {
+    border: 2px solid #ecf006;
+    border-spacing: 15px;
+    margin: 10px;
+  }
+  body #mainContent #mineSection .boxCV table caption {
+    font-size: 2.5rem;
+    color: #fae673;
+  }
+  body #mainContent #mineSection .boxCV table tr {
+    font-size: 1.3rem;
+  }
+  body #mainContent #mineSection .boxCV table tr th {
+    border: 2px solid #ecf006;
+  }
+  /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
   /************ beck to up button ******************/
   .btn {
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
     background-color: #2eb82e;
     color: black;
     border-radius: 50px;
@@ -247,11 +298,71 @@ body #mainContent #mineSection .boxCV table tr th {
     transition: all 0.4s;
     opacity: .5;
   }
-  .btn:hover {
-    height: 80px;
+  #footerBoxCV {
+    margin-top: 30px;
+    position: relative;
+    clear: both;
+    /*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    width: 100%;
+    border-top: 1px solid #528415;
+    font-size: .8rem;
+    /*dimensione del testo*/
+  }
+  #footerBoxCV .footerText {
+    color: #ffad33;
+    text-align: center;
+  }
+  #footerBoxCV .footerText .material-icons {
+    /*mini icona di fianco al num di cell*/
+    font-size: 13px;
+  }
+  #footerBoxCV .footerText .text1 {
+    padding-left: 7px;
+  }
+  #footerBoxCV .footerLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #footerBoxCV .footerLink .links {
+    color: #bbff33;
+    padding: 5px 1px;
+  }
+  #footerBoxCV .footerLink .links a {
+    color: #09906e;
+  }
+  #footerBoxCV .footerLink img {
+    /*mini icona di fianco al num di cell*/
+    float: left;
+    width: 9px;
+  }
+  #footerBoxCV .myLogo {
+    text-align: center;
+    margin: 15px 50px 15px 50px;
+  }
+  #footerBoxCV .myLogo img {
+    width: 110px;
+  }
+  #footerBoxCV .cvButton form {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  #footerBoxCV .cvButton form button {
+    border: none;
+    border-radius: 10px;
+    color: #e8ec14;
+    padding: 5px 9px;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #080801;
+    border: 3px solid #eeea09;
   }
 }
 
+/**************************************************************************/
 @media only screen and (min-width: 999px) {
   body header {
     margin-top: 30px;
@@ -267,7 +378,7 @@ body #mainContent #mineSection .boxCV table tr th {
     float: right;
     width: 250px;
     padding: 3px;
-    margin: 7px;
+    margin: -15px 5px 5px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
@@ -318,7 +429,7 @@ body #mainContent #mineSection .boxCV table tr th {
     float: right;
     width: 110px;
     padding: 2px;
-    margin: 5px -5px 5px 5px;
+    margin: -20px -5px 5px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
@@ -460,7 +571,7 @@ body #mainContent #mineSection .boxCV table tr th {
     margin: 15px 50px 15px 50px;
   }
   #footerBoxCV .myLogo img {
-    width: 130px;
+    width: 110px;
   }
   #footerBoxCV .cvButton form {
     position: absolute;

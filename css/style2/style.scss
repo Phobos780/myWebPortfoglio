@@ -10,6 +10,11 @@
 $linkColor: #09906e;
 $titleRighteColor: #bbff33;
 
+@mixin myLogo {
+  width: 110px;
+  
+}
+
 @mixin backBtn {
   border: none;
   border-radius: 10px;
@@ -188,7 +193,7 @@ body{
     text-align: center;
     margin: 15px 50px 15px 50px;
     img{
-      width: 200px;
+      @include myLogo;
     }
   }
   .cvButton{
@@ -213,48 +218,172 @@ body{
 
 /**************************************************************************/
 @media only screen and (min-width: 668px) {
-  
+
+  /************** HEADER **************/
+  #header{
+    margin-top: 20px;
+    border-bottom: thick double #bbff33;
+    margin-bottom: 55px;
+    h1{
+      text-align: center;
+      @include titleRighte;
+      font-size: 2.3rem;                
+    }      
+    form{
+      position: absolute;
+      top: 95px;
+      left: 10px;
+      button{
+        border: none;
+        border-radius: 10px;
+        color: rgb(232, 236, 20);
+        padding: 5px 9px;
+        text-decoration: none;
+        font-size: 12px;
+        background-color: rgb(8, 8, 1);
+        border: 3px solid #eeea09;
+      
+      }
+    }
+  }
+
+
+
+  /************* MAINE ***************/
   body, #mineSection, #cvPicture{
     td{   
       img{
         float: right;
         width: 170px;
         padding: 3px;
-        margin: 5px;
+        margin: -15px 5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
+        
         
       }
     }    
   }
 
 
-    /************ beck to up button ******************/
+   body #mainContent{
+      #mineSection{  
+        .boxCV{
+          table{
+            border: 2px solid rgb(236, 240, 6);
+            border-spacing: 15px;
+            margin: 10px;
+            caption{
+              font-size: 2.5rem;
+              color: rgb(250, 230, 115);
+            }
+            tr{
+              font-size: 1.3rem;
+              th{
+                border: 2px solid rgb(236, 240, 6);
 
-    .btn{
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
-      font-size: 2rem;
-      background-color: #2eb82e;
-      color: black;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      outline: none;
-      transition: all 0.4s;
-      opacity: .5;
-  
-    }
-    .btn:hover{
-      height: 80px;
+              }
+          } 
+        }
+      }
     }
   }
 
 
 
 
+
+               /*
+          ******************************************
+          *************** F O O T E R **************
+          ******************************************
+          */
+          
+      
+  /************ beck to up button ******************/
+
+  .btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s;
+    opacity: .5;
+
+  }
+
+  #footerBoxCV{
+    margin-top: 30px;
+    position: relative;//serve per bottone "back"
+    clear: both;/*questo comando esola "FOOTER" da gli "FLOAT", cioè footer rimane sempre al suo posto*/
+    width: 100%;
+    border-top: 1px solid #528415;
+    font-size: .8rem;/*dimensione del testo*/
+    .footerText{
+      color: #ffad33;
+      text-align: center;
+      .material-icons{/*mini icona di fianco al num di cell*/
+      font-size: 13px;
+      }
+      .text1{
+        padding-left: 7px;
+      }
+    }
+    .footerLink{
+      display: flex;
+      justify-content: space-around;
+      
+      .links{
+        color: $titleRighteColor;
+        padding: 5px 1px;
+        a{
+          color: $linkColor;
+        }
+      }
+      img{/*mini icona di fianco al num di cell*/
+      float: left;
+      width: 9px;
+      }
+    }
+    .myLogo{
+      text-align: center;
+      margin: 15px 50px 15px 50px;
+      img{
+        @include myLogo;
+      }
+    }
+    .cvButton{
+      form{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        button{
+          border: none;
+          border-radius: 10px;
+          color: rgb(232, 236, 20);
+          padding: 5px 9px;
+          text-decoration: none;
+          font-size: 12px;
+          background-color: rgb(8, 8, 1);
+          border: 3px solid #eeea09;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+/**************************************************************************/
 @media only screen and (min-width: 999px) {
 
   body header{
@@ -273,7 +402,7 @@ body{
         float: right;
         width: 250px;
         padding: 3px;
-        margin: 7px;
+        margin: -15px 5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
         
@@ -336,7 +465,7 @@ body{
         float: right;
         width: 110px;
         padding: 2px;
-        margin: 5px -5px 5px 5px;
+        margin: -20px -5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
         
@@ -474,7 +603,7 @@ body{
       text-align: center;
       margin: 15px 50px 15px 50px;
       img{
-        width: 130px;
+        @include myLogo;
       }
     }
     .cvButton{

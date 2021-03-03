@@ -53,30 +53,16 @@
 
   <body>
 
-    <!--BUTTON UP-->
-    <button class="btn">up<i class="fa fa-arrow-up"></i></button>
-    <script>
-        let btn= document.querySelector('.btn');
-        btn.addEventListener('click',function(){
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            })
-        })
-    </script>
+
 
     <!--******* HEADER *******-->
     <header>
       <div id="bigBar">
         <div id="mySidebar" class="sidebar">
           <section id="titelLeftSide">
-            <a href="index.html">
-              <div class="lighteName">
-                <h1 class="name">TARAS</h1>
-              </div>
+            <a href="#box1">
               <div class="lighteSorname">
-                <h1 class="sorname">MYKHAYLOVSKYY</h1>
+                <h1 class="sorname">TARAS MYKHAYLOVSKYY</h1>
               </div>
             </a>
             <h4>{ The more technology I learn, <br> the more I realize <br> how little I know... }</h4>
@@ -99,12 +85,9 @@
     <div id="smallBar">
       <div id="mySidebarSmall" class="sidebar">
         <section id="titelLeftSide">
-          <a href="index.html">
-            <div class="lighteName">
-              <h1 class="name"><strong>TARAS</strong></h1>
-            </div>
+          <a href="#box1">
             <div class="lighteSorname">
-              <h1 class="sorname"><strong>MYKHAYLOVSKYY</strong></h1>
+              <h1 class="sorname">TARAS MYKHAYLOVSKYY</h1>
             </div>
           </a>
           <h4>{ The more technology I learn, <br> the more I realize <br> how little I know... }</h4>
@@ -131,17 +114,7 @@
   <div id="main">
     <button class="openbtn" onclick="openNav()"> ☰ </button>  
   </div>
-    <script>
-      function openNav() {
-        document.getElementById("mySidebarSmall").style.width = "230px";
-        document.getElementById("main").style.marginLeft = "230px";
-      }
-                 
-      function closeNav() {
-        document.getElementById("mySidebarSmall").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-      }
-    </script>
+
 
                   <!--******* M A I N *******-->
     <main id="main-content" class="clearfix">
@@ -218,5 +191,33 @@
         </div>
       </section>
     </footer>
+
+        <!-- JS -->
+        
+        <!-- MENU NAV -->
+        <script>
+          function openNav() {
+            document.getElementById("mySidebarSmall").style.width = "230px";
+            document.getElementById("main").style.marginLeft = "230px";
+          }
+                    
+          function closeNav() {
+            document.getElementById("mySidebarSmall").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+        </script>
+
+        <!--BUTTON UP-->
+        <button class="btn">up<i class="fa fa-arrow-up"></i></button>
+        <script>
+            let btn= document.querySelector('.btn');
+            btn.addEventListener('click',function(){
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                })
+            })
+        </script>
   </body>
 </html>

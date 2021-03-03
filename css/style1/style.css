@@ -63,16 +63,6 @@ header #bigBar #mySidebar #titelLeftSide h4 {
   font-family: 'Dancing Script', cursive;
 }
 
-header #bigBar #mySidebar #titelLeftSide .name {
-  text-align: center;
-  margin: 9px;
-  font-size: 3rem;
-  font-family: 'Bebas Neue', cursive;
-  margin-top: 5px;
-  color: #e79f04;
-  margin-bottom: auto;
-}
-
 header #bigBar #mySidebar #titelLeftSide .sorname {
   text-align: center;
   margin: 9px;
@@ -328,7 +318,7 @@ header nav #menuNav hr {
 }
 
 #footerBox .myLogo img {
-  width: 200px;
+  width: 110px;
 }
 
 /***********************************************************************************************************************************************************************************************************************************/
@@ -354,15 +344,6 @@ header nav #menuNav hr {
     transition: 0.5s;
     padding-top: 10px;
     border-right: 1px solid #528415;
-  }
-  header #smallBar #mySidebarSmall #titelLeftSide .name {
-    text-align: center;
-    margin: 9px;
-    font-size: 2.7rem;
-    font-family: 'Bebas Neue', cursive;
-    margin-top: 5px;
-    color: #e79f04;
-    margin-bottom: auto;
   }
   header #smallBar #mySidebarSmall #titelLeftSide .sorname {
     text-align: center;
@@ -442,6 +423,15 @@ header nav #menuNav hr {
   width: 100%;
 }
 
+#footerBox .myLogo {
+  text-align: center;
+  margin: 15px 50px 5px 50px;
+}
+
+#footerBox .myLogo img {
+  width: 110px;
+}
+
 /**************************************************************************/
 @media only screen and (min-width: 1277px) {
   nav .closebtn {
@@ -481,21 +471,12 @@ header nav #menuNav hr {
     font-size: 2.2rem;
     font-family: 'Dancing Script', cursive;
   }
-  header #bigBar #mySidebar #titelLeftSide .name {
-    text-align: center;
-    margin: 9px;
-    font-size: 3rem;
-    font-family: 'Bebas Neue', cursive;
-    margin-top: 5px;
-    color: #e79f04;
-    margin-bottom: auto;
-  }
   header #bigBar #mySidebar #titelLeftSide .sorname {
     text-align: center;
     margin: 9px;
     font-size: 3rem;
     font-family: 'Bebas Neue', cursive;
-    margin-top: 5px;
+    margin-top: 15px;
     color: #2db300;
   }
   header #bigBar #mySidebar nav #menuNav {
@@ -607,7 +588,7 @@ header nav #menuNav hr {
     margin: 15px 50px 5px 50px;
   }
   #footerBox .myLogo img {
-    width: 170px;
+    width: 110px;
   }
   #footerBox .links a:hover {
     color: #40f2c8;
@@ -750,15 +731,6 @@ header nav #menuNav hr {
     transition: 0.5s;
     padding-top: 10px;
     border-right: 1px solid #528415;
-  }
-  header #smallBar #mySidebarSmall #titelLeftSide .name {
-    text-align: center;
-    margin: 9px;
-    font-size: 2.7rem;
-    font-family: 'Bebas Neue', cursive;
-    margin-top: 5px;
-    color: #e79f04;
-    margin-bottom: auto;
   }
   header #smallBar #mySidebarSmall #titelLeftSide .sorname {
     text-align: center;
@@ -1054,7 +1026,7 @@ header nav #menuNav hr {
     margin: 15px 50px 5px 50px;
   }
   #footerBox .myLogo img {
-    width: 130px;
+    width: 110px;
   }
 }
 /*# sourceMappingURL=style.css.map */

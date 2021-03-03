@@ -13,6 +13,11 @@ $bodyColor: #3a3a2c;
 $bodyTexColor: #ffad33;
 $titleRighteColor: #bbff33;
 
+@mixin myLogo {
+  width: 110px;
+  
+}
+
 @mixin decoration-line($color, $width, $gauge, $marginLeft){
   border: 0;
   border-top: $gauge solid $color;
@@ -108,13 +113,7 @@ header{
           font-size: 2rem;
           font-family: 'Dancing Script', cursive;
         }
-  
-        .name{
-          @include title(9px, 3rem, 5px, $titleNavColor1);
-          margin-bottom: auto;
-  
-        }
-  
+
         .sorname{
           @include title(9px, 3rem, 5px, #2db300);
   
@@ -297,7 +296,7 @@ header{
     text-align: center;
     margin: 15px 50px 5px 50px;
     img{
-      width: 200px;
+      @include myLogo;
     }
   }
 }
@@ -335,11 +334,6 @@ header{
           border-right: 1px solid #528415;
     
         #titelLeftSide {
-          .name{
-            @include title(9px, 2.7rem, 5px, $titleNavColor1);
-            margin-bottom: auto;
-                
-          }
     
           .sorname {
             @include title(9px, 2.7rem, 5px, #2db300);
@@ -421,6 +415,13 @@ header{
   
   #footerBox{
     width: 100%;
+    .myLogo{
+      text-align: center;
+      margin: 15px 50px 5px 50px;
+      img{
+        @include myLogo;
+      }
+    }
   }
 
 
@@ -475,15 +476,9 @@ header{
             font-size: 2.2rem;
             font-family: 'Dancing Script', cursive;
           }
-    
-          .name{
-            @include title(9px, 3rem, 5px, $titleNavColor1);
-            margin-bottom: auto;
-    
-          }
-    
+
           .sorname{
-            @include title(9px, 3rem, 5px, #2db300);
+            @include title(9px, 3rem, 15px, #2db300);
     
           }
         }
@@ -598,7 +593,7 @@ header{
     text-align: center;
     margin: 15px 50px 5px 50px;
     img{
-      width: 170px;
+      @include myLogo;
     }
   }
   .links a:hover{
@@ -711,12 +706,6 @@ header{
           border-right: 1px solid #528415;
     
         #titelLeftSide {
-          .name{
-            @include title(9px, 2.7rem, 5px, $titleNavColor1);
-            margin-bottom: auto;
-                
-          }
-    
           .sorname {
             @include title(9px, 2.7rem, 5px, #2db300);
     
@@ -961,7 +950,7 @@ header{
       text-align: center;
       margin: 15px 50px 5px 50px;
       img{
-        width: 130px;
+        @include myLogo;
       }
     }
   }
