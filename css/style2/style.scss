@@ -73,7 +73,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
     header{
-      border-bottom: thick double #bbff33;;
+      border-bottom: thick double #bbff33;
       h1{
         text-align: center;
         @include titleRighte;
@@ -248,7 +248,7 @@ body{
         float: right;
         width: 170px;
         padding: 3px;
-        margin: -15px 5px 5px 5px;
+        //margin: -15px 5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
                 
@@ -384,7 +384,7 @@ body{
         float: right;
         width: 250px;
         padding: 3px;
-        margin: -15px 5px 5px 5px;
+        margin: 5px 5px 5px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
         
@@ -447,7 +447,7 @@ body{
         float: right;
         width: 110px;
         padding: 2px;
-        margin: -20px -5px 5px 5px;
+        margin: 15px 1px 1px 5px;
         border-radius: 10px;
         border: 2px solid rgb(6, 141, 35);
         
@@ -497,9 +497,8 @@ body{
             background-color: #243142;
             opacity: .9;/*diamo un efetto trasparenza*/
             margin: 25px;
-            box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);/*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
-            border-radius: 7px;
-  
+            box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);
+            border-radius: 7px;  
             table{
               border: 2px solid rgb(236, 240, 6);
               border-spacing: 15px;
@@ -606,5 +605,52 @@ body{
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 333px) {
+
+  body{
+
+      #header{
+        margin-top: 20px;
+        border-bottom: thick double #bbff33;
+        margin-bottom: 55px;
+        h1{
+          text-align: center;
+          @include titleRighte;
+          font-size: 1.5rem;                
+        }      
+        form{
+          position: absolute;
+          top: 75px;
+          left: 10px;
+          button{
+            border: none;
+            border-radius: 10px;
+            color: rgb(232, 236, 20);
+            padding: 5px 9px;
+            text-decoration: none;
+            font-size: 12px;
+            background-color: rgb(8, 8, 1);
+            border: 3px solid #eeea09;
+          
+          }
+        }
+      }
+    }
+
+  body #mineSection #cvPicture{
+    td{//my picture
+      img{
+        float: right;
+        width: 90px;
+        padding: 2px;
+        margin: -15px 1px 1px 5px;
+        border-radius: 10px;
+        border: 2px solid rgb(6, 141, 35);
+        
+      }
+    }    
   }
 }

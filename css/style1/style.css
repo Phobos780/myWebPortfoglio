@@ -1029,4 +1029,82 @@ header nav #menuNav hr {
     width: 110px;
   }
 }
+
+@media only screen and (max-width: 333px) {
+  /********  SIDE BAR MOBILE  *********/
+  header #smallBar #mySidebarSmall {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    opacity: .94;
+    top: 0;
+    left: 0;
+    background-color: #3a3a2c;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 10px;
+    border-right: 1px solid #528415;
+  }
+  header #smallBar #mySidebarSmall #titelLeftSide .sorname {
+    text-align: center;
+    margin: 9px;
+    font-size: 2.7rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5px;
+    color: #2db300;
+  }
+  header #smallBar #mySidebarSmall #titelLeftSide h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #e79f04;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+  header #smallBar #mySidebarSmall #menuNav .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: #bbff33;
+    padding: 5px 10px 8px 10px;
+    border: none;
+  }
+  header #smallBar #mySidebarSmall #menuNav .material-icons {
+    /*mini icona di fianco al num di cell*/
+    font-size: 19px;
+    color: #e79f04;
+    float: left;
+  }
+  header #smallBar #mySidebarSmall #menuNav li a {
+    padding: 2px 8px 8px 20px;
+    color: #09d3a0;
+    font-size: 1.2rem;
+    /*dimensioni testo*/
+    text-transform: uppercase;
+    /*tutto il testo maiuscolo*/
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header #smallBar #mySidebarSmall #menuNav hr {
+    border: 0;
+    border-top: 3px solid #0ACE99;
+    margin-left: 1px;
+    margin-top: 10px;
+    width: 25px;
+    margin-top: 5px;
+  }
+  header #smallBar #mySidebarSmall .myFoto {
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 29px;
+    width: 170px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

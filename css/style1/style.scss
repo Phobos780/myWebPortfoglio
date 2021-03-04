@@ -933,3 +933,82 @@ header{
   }
 }        
 
+@media only screen and (max-width: 333px) {
+
+        /********  SIDE BAR MOBILE  *********/
+
+      header {
+        #smallBar{
+          #mySidebarSmall{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            opacity: .94;
+            top: 0;
+            left: 0;
+            background-color: $bodyColor;
+            overflow: hidden;
+            transition: 0.5s;
+            padding-top: 10px;
+            border-right: 1px solid #528415;
+      
+          #titelLeftSide {
+            .sorname {
+              @include title(9px, 2.7rem, 5px, #2db300);
+      
+            }
+  
+            h4{
+              margin-top: 5px;
+              margin-bottom: 5px;
+              text-align: center;
+              color: $titleNavColor1;
+              font-size: 1.5rem;
+              font-family: 'Dancing Script', cursive;
+            }
+          }
+          #menuNav{
+            .closebtn {
+              position: absolute;            
+              top: 5px;
+              right: 5px;
+              font-size: 20px;
+              border-radius: 10px;
+              cursor: pointer;
+              background-color: black;
+              color: #bbff33;
+              padding: 5px 10px 8px 10px;
+              border: none;
+      
+            }
+  
+            .material-icons{/*mini icona di fianco al num di cell*/
+              font-size: 19px;
+              color: $titleNavColor1;
+              float: left;
+            }
+  
+            li{
+              a{
+                padding: 2px 8px 8px 20px;
+                color: #09d3a0;
+                font-size: 1.2rem;/*dimensioni testo*/
+                text-transform: uppercase;/*tutto il testo maiuscolo*/
+                
+                display: block;
+                transition: 0.3s;
+              }
+            }
+            hr {
+              @include decoration-line(#0ACE99, 25px, 3px, 1px);
+              margin-top: 5px;
+            }
+          }      
+          .myFoto{
+            @include myPicture(5px, 29px, 170px);
+          }
+      }
+    }
+  } 
+}

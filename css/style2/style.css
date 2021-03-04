@@ -255,7 +255,6 @@ body #mainContent #mineSection .boxCV table tr th {
     float: right;
     width: 170px;
     padding: 3px;
-    margin: -15px 5px 5px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
@@ -373,7 +372,7 @@ body #mainContent #mineSection .boxCV table tr th {
     float: right;
     width: 250px;
     padding: 3px;
-    margin: -15px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
@@ -424,7 +423,7 @@ body #mainContent #mineSection .boxCV table tr th {
     float: right;
     width: 110px;
     padding: 2px;
-    margin: -20px -5px 5px 5px;
+    margin: 15px 1px 1px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
   }
@@ -480,7 +479,6 @@ body #mainContent #mineSection .boxCV table tr th {
     margin: 25px;
     -webkit-box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);
             box-shadow: 0px 0px 7px 9px rgba(10, 63, 235, 0.596);
-    /*per fare la sfumatura. ordine di dati: asse X, asse Y, livello di trasparenza di sfumatura, difusione di sfumatura, e i colori. se vuoi l'ombra dal altro lato basta che inserisci il numero negativo sul asse X o Y (piano cartesiano)*/
     border-radius: 7px;
   }
   body #mainContent #mineSection .boxCV table {
@@ -582,6 +580,45 @@ body #mainContent #mineSection .boxCV table tr th {
     font-size: 12px;
     background-color: #080801;
     border: 3px solid #eeea09;
+  }
+}
+
+@media only screen and (max-width: 333px) {
+  body #header {
+    margin-top: 20px;
+    border-bottom: thick double #bbff33;
+    margin-bottom: 55px;
+  }
+  body #header h1 {
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 2.5rem;
+    color: #bbff33;
+    font-size: 1.5rem;
+  }
+  body #header form {
+    position: absolute;
+    top: 75px;
+    left: 10px;
+  }
+  body #header form button {
+    border: none;
+    border-radius: 10px;
+    color: #e8ec14;
+    padding: 5px 9px;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #080801;
+    border: 3px solid #eeea09;
+  }
+  body #mineSection #cvPicture td img {
+    float: right;
+    width: 90px;
+    padding: 2px;
+    margin: -15px 1px 1px 5px;
+    border-radius: 10px;
+    border: 2px solid #068d23;
   }
 }
 /*# sourceMappingURL=style.css.map */
