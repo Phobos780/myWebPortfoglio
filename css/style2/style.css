@@ -334,7 +334,7 @@ body #mainContent #mineSection .boxCV table tr th {
   #footerBoxCV .footerLink img {
     /*mini icona di fianco al num di cell*/
     float: left;
-    width: 9px;
+    width: 12px;
   }
   #footerBoxCV .myLogo {
     text-align: center;
@@ -361,7 +361,7 @@ body #mainContent #mineSection .boxCV table tr th {
 }
 
 /**************************************************************************/
-@media only screen and (min-width: 999px) {
+@media only screen and (min-width: 1277) {
   body #header form button:hover {
     background: #eeea09;
     -webkit-transition: .5s;
@@ -374,11 +374,16 @@ body #mainContent #mineSection .boxCV table tr th {
     padding: 3px;
     margin: 5px 5px 5px 5px;
     border-radius: 10px;
-    border: 2px solid #068d23;
+    border: 2px solid #d10909;
   }
+  /*
+      ******************************************
+      *************** F O O T E R **************
+      ******************************************
+      */
   footer #footerBoxCV {
     margin-top: 50px;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
   }
   footer #footerBoxCV .links a:hover {
     color: #40f2c8;
@@ -418,6 +423,7 @@ body #mainContent #mineSection .boxCV table tr th {
   ************************************
   ************** M A I N *************
   ************************************
+  (6, 141, 35);
   */
   body td img, #mineSection td img, #cvPicture td img {
     float: right;
@@ -425,7 +431,7 @@ body #mainContent #mineSection .boxCV table tr th {
     padding: 2px;
     margin: 15px 1px 1px 5px;
     border-radius: 10px;
-    border: 2px solid #068d23;
+    border: 2px solid #e93507;
   }
   body {
     background-image: url(../images/p2.jpg);
@@ -583,10 +589,10 @@ body #mainContent #mineSection .boxCV table tr th {
   }
 }
 
-@media only screen and (max-width: 333px) {
+@media only screen and (max-width: 373px) {
   body #header {
     margin-top: 20px;
-    border-bottom: thick double #bbff33;
+    border-bottom: thick double #e61912;
     margin-bottom: 55px;
   }
   body #header h1 {
@@ -619,6 +625,24 @@ body #mainContent #mineSection .boxCV table tr th {
     margin: -15px 1px 1px 5px;
     border-radius: 10px;
     border: 2px solid #068d23;
+  }
+  /************ beck to up button ******************/
+  .btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: .5;
   }
 }
 /*# sourceMappingURL=style.css.map */

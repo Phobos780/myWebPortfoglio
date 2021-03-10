@@ -336,7 +336,7 @@ body{
       }
       img{/*mini icona di fianco al num di cell*/
       float: left;
-      width: 9px;
+      width: 12px;
       }
     }
     .myLogo{
@@ -368,7 +368,7 @@ body{
 }
 
 /**************************************************************************/
-@media only screen and (min-width: 999px) {
+@media only screen and (min-width: 1277) {
 
   body #header form{
     button:hover{
@@ -386,15 +386,22 @@ body{
         padding: 3px;
         margin: 5px 5px 5px 5px;
         border-radius: 10px;
-        border: 2px solid rgb(6, 141, 35);
+        border: 2px solid rgb(209, 9, 9);
         
       }
     }    
   }
 
+                /*
+      ******************************************
+      *************** F O O T E R **************
+      ******************************************
+      */
+
+
   footer #footerBoxCV{
     margin-top: 50px;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     .links a:hover{
       color: #40f2c8;
       text-decoration: underline;
@@ -429,7 +436,9 @@ body{
     .btn:hover{
       height: 80px;
     }
-  }
+
+   
+}
 
 /**************************************************************************/
 @media only screen and (max-width: 667px) {
@@ -439,6 +448,7 @@ body{
   ************************************
   ************** M A I N *************
   ************************************
+  (6, 141, 35);
   */
 
   body, #mineSection, #cvPicture{
@@ -449,7 +459,7 @@ body{
         padding: 2px;
         margin: 15px 1px 1px 5px;
         border-radius: 10px;
-        border: 2px solid rgb(6, 141, 35);
+        border: 2px solid rgb(233, 53, 7);
         
       }
     }    
@@ -527,25 +537,25 @@ body{
           */
           
       
-/************ beck to up button ******************/
+ /************ beck to up button ******************/
 
-.btn{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 37px;
-  height: 37px;
-  font-size: 1.5rem;
-  background-color: #2eb82e;
-  color: black;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.4s;
-  opacity: .5;
+  .btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s;
+    opacity: .5;
 
-}
+  }
 
   #footerBoxCV{
     margin-top: 30px;
@@ -608,13 +618,13 @@ body{
   }
 }
 
-@media only screen and (max-width: 333px) {
+@media only screen and (max-width: 373px) {
 
   body{
 
       #header{
         margin-top: 20px;
-        border-bottom: thick double #bbff33;
+        border-bottom: thick double #e61912;
         margin-bottom: 55px;
         h1{
           text-align: center;
@@ -653,4 +663,29 @@ body{
       }
     }    
   }
+
+  /************ beck to up button ******************/
+
+  .btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    background-color: #2eb82e;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s;
+    opacity: .5;
+
+  }
+
+
+
+
+
 }
